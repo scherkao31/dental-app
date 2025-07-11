@@ -1,1 +1,0 @@
-# 🦷 Dental AI Assistant Suite
