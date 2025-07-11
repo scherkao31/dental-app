@@ -1,0 +1,122 @@
+TITRE: Codes TARMED dentaires et facturation
+CATÉGORIE: Assurances
+TYPE: Tarification
+
+CONTENU:
+
+CODES TARMED DENTAIRES PRINCIPAUX :
+
+1. CONSULTATIONS ET DIAGNOSTICS
+- 00.0010 : Consultation, première (AL=4.1, TL=9.6)
+- 00.0020 : Consultation, suivante (AL=2.8, TL=6.4)
+- 00.0030 : Consultation d'urgence (AL=5.2, TL=11.2)
+- 00.0040 : Consultation téléphonique (AL=1.2, TL=2.8)
+
+2. RADIOLOGIE
+- 39.0010 : Radiographie intrabuccale (AL=0.8, TL=1.4)
+- 39.0020 : Radiographie panoramique (AL=1.2, TL=2.8)
+- 39.0030 : Téléradiographie (AL=1.6, TL=3.2)
+- 39.0040 : CBCT dentaire (AL=2.4, TL=4.8)
+
+3. PROPHYLAXIE
+- 00.0110 : Détartrage, par séance (AL=3.2, TL=7.2)
+- 00.0120 : Polissage dentaire (AL=1.8, TL=4.0)
+- 00.0130 : Application de fluorure (AL=0.8, TL=1.6)
+- 00.0140 : Instruction d'hygiène (AL=2.4, TL=5.2)
+
+4. SOINS CONSERVATEURS
+- 00.0210 : Obturation composite, 1 face (AL=8.4, TL=12.8)
+- 00.0220 : Obturation composite, 2 faces (AL=12.6, TL=18.4)
+- 00.0230 : Obturation composite, 3+ faces (AL=16.8, TL=24.0)
+- 00.0240 : Obturation amalgame (AL=6.8, TL=10.4)
+
+5. ENDODONTIE
+- 00.0310 : Traitement canalaire, incisive (AL=28.0, TL=32.0)
+- 00.0320 : Traitement canalaire, prémolaire (AL=35.2, TL=40.8)
+- 00.0330 : Traitement canalaire, molaire (AL=44.8, TL=52.0)
+- 00.0340 : Retraitement endodontique (AL=52.0, TL=60.8)
+
+6. PARODONTOLOGIE
+- 00.0410 : Détartrage sous-gingival, par quadrant (AL=12.0, TL=16.8)
+- 00.0420 : Curetage parodontal (AL=8.4, TL=12.0)
+- 00.0430 : Chirurgie parodontale (AL=24.0, TL=28.8)
+
+7. CHIRURGIE DENTAIRE
+- 00.0510 : Extraction simple (AL=8.0, TL=12.0)
+- 00.0520 : Extraction chirurgicale (AL=16.0, TL=22.4)
+- 00.0530 : Extraction dent de sagesse (AL=24.0, TL=32.0)
+- 00.0540 : Apicectomie (AL=32.0, TL=40.0)
+
+8. PROTHÈSES
+- 00.0610 : Couronne céramo-métallique (AL=40.0, TL=48.0)
+- 00.0620 : Couronne tout céramique (AL=48.0, TL=56.0)
+- 00.0630 : Bridge 3 éléments (AL=96.0, TL=112.0)
+- 00.0640 : Prothèse partielle (AL=120.0, TL=140.0)
+
+REMBOURSEMENTS LAMal :
+
+PRESTATIONS COUVERTES :
+- Traitements dus à maladie grave
+- Traitements dus à accident
+- Anomalies congénitales graves
+- Traitements conservateurs chez enfants < 18 ans (limité)
+
+PRESTATIONS NON COUVERTES :
+- Soins préventifs de routine
+- Prothèses dentaires
+- Implants dentaires
+- Orthodontie (sauf cas graves)
+- Blanchiment dentaire
+
+ASSURANCES COMPLÉMENTAIRES :
+
+COUVERTURE TYPIQUE :
+- Soins préventifs : 100% (1x/an)
+- Soins conservateurs : 75-90%
+- Prothèses : 50-75% (plafond annuel)
+- Orthodontie : 50-75% (enfants)
+- Implants : 50% (selon contrat)
+
+PROCÉDURES DE FACTURATION :
+
+1. DEVIS PRÉALABLE
+- Obligatoire pour montants > 1000 CHF
+- Détail des traitements prévus
+- Codes TARMED précis
+- Estimation des coûts
+- Délai de validité (6 mois)
+
+2. FACTURATION
+- Facturation par position TARMED
+- Mention de la date de traitement
+- Diagnostic précis
+- Justification si nécessaire
+- Signature du praticien
+
+3. REMBOURSEMENT
+- Délai de traitement : 30 jours
+- Possibilité de tiers payant
+- Contrôles aléatoires
+- Demandes de justification
+
+NÉGOCIATION AVEC ASSUREURS :
+
+STRATÉGIES :
+- Documentation complète
+- Justification médicale
+- Photos cliniques
+- Radiographies
+- Devis détaillé
+- Correspondance professionnelle
+
+RECOURS :
+- Recours interne (30 jours)
+- Médiation
+- Tribunal des assurances
+- Expertise médicale indépendante
+
+TARIFS CONVENTIONNELS :
+- Valeur du point : 1.00 CHF (AL), 1.00 CHF (TL)
+- Facteur d'échelle cantonal
+- Suppléments autorisés
+- Tarifs libres possibles 

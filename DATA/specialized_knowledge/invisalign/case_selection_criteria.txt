@@ -1,0 +1,82 @@
+TITRE: Critères de sélection des cas Invisalign
+CATÉGORIE: Orthodontie
+TYPE: Protocole clinique
+
+CONTENU:
+
+CRITÈRES DE SÉLECTION INVISALIGN :
+
+1. CAS SIMPLES (Invisalign Lite, Express)
+- Encombrement antérieur léger (< 4mm)
+- Espacement léger (< 2mm par arcade)
+- Corrections mineures post-orthodontie
+- Rotations légères (< 20°)
+- Intrusion/extrusion mineure (< 2mm)
+- Expansion légère (< 4mm)
+
+2. CAS MODÉRÉS (Invisalign Comprehensive)
+- Encombrement modéré (4-6mm)
+- Classe II division 1 légère à modérée
+- Classe III légère (sans décalage squelettique)
+- Béance antérieure légère (< 2mm)
+- Supraclusion modérée
+- Rotations modérées (20-45°)
+- Corrections de ligne médiane (< 2mm)
+
+3. CAS COMPLEXES (Invisalign + auxiliaires)
+- Encombrement sévère (> 6mm)
+- Extractions nécessaires
+- Impactions dentaires
+- Corrections verticales importantes
+- Rotations sévères (> 45°)
+- Corrections squelettiques mineures
+- Cas chirurgico-orthodontiques
+
+CONTRE-INDICATIONS RELATIVES :
+- Mauvaise compliance patient
+- Hygiène bucco-dentaire déficiente
+- Parodontite non contrôlée
+- Bruxisme sévère
+- Résorptions radiculaires préexistantes
+- Dents avec couronnes/bridges étendus
+
+CONTRE-INDICATIONS ABSOLUES :
+- Décalages squelettiques sévères
+- Impactions complexes
+- Ankylose dentaire
+- Résorptions radiculaires actives
+- Pathologies temporo-mandibulaires sévères
+
+ÉVALUATION CLINIQUE :
+1. Analyse céphalométrique
+2. Analyse des modèles
+3. Évaluation parodontale
+4. Radiographies panoramiques
+5. CBCT si nécessaire
+6. Photographies intra et extra-orales
+
+FACTEURS DE SUCCÈS :
+- Compliance patient (22h/jour minimum)
+- Attachements optimaux
+- IPR planifiée correctement
+- Suivi régulier (6-8 semaines)
+- Refinements si nécessaire
+- Contention adaptée
+
+PROTOCOLE DE VALIDATION :
+1. Scan intra-oral précis
+2. Prescription détaillée
+3. Validation ClinCheck
+4. Modifications si nécessaire
+5. Approbation finale
+6. Fabrication des aligneurs
+
+TAUX DE SUCCÈS ATTENDUS :
+- Cas simples : 85-95%
+- Cas modérés : 70-85%
+- Cas complexes : 60-75%
+
+DURÉE DE TRAITEMENT :
+- Cas simples : 6-12 mois
+- Cas modérés : 12-18 mois
+- Cas complexes : 18-24+ mois 

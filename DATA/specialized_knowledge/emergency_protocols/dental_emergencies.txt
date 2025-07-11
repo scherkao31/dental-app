@@ -1,0 +1,201 @@
+TITRE: Protocoles d'urgences dentaires
+CATÉGORIE: Urgences
+TYPE: Protocoles médicaux
+
+CONTENU:
+
+URGENCES DENTAIRES COURANTES :
+
+1. DOULEUR DENTAIRE AIGUË
+
+ÉVALUATION :
+- Intensité (échelle 1-10)
+- Localisation précise
+- Facteurs déclenchants
+- Durée et évolution
+- Traitements déjà tentés
+
+PROTOCOLE :
+- Examen clinique complet
+- Tests de vitalité pulpaire
+- Radiographie si nécessaire
+- Antalgie immédiate
+- Traitement étiologique
+
+MÉDICATION :
+- Ibuprofène 600mg x 3/jour
+- Paracétamol 1g x 3/jour
+- Antispasmodiques si nécessaire
+- Éviter aspirine
+- Antibiotiques si infection
+
+2. TRAUMATISME DENTAIRE
+
+FRACTURE CORONAIRE :
+- Évaluation de l'exposition pulpaire
+- Protection pulpaire si nécessaire
+- Restauration temporaire
+- Suivi radiographique
+- Orientation endodontique
+
+LUXATION DENTAIRE :
+- Repositionnement immédiat
+- Contention souple (7-14 jours)
+- Contrôle occlusal
+- Antibioprophylaxie
+- Suivi endodontique
+
+AVULSION DENTAIRE :
+- Réimplantation immédiate si possible
+- Conservation en lait/sérum
+- Nettoyage délicat de la racine
+- Contention (7-14 jours)
+- Suivi endodontique obligatoire
+
+3. INFECTIONS ODONTOGÈNES
+
+CELLULITE FACIALE :
+- Évaluation de l'extension
+- Drainage si fluctuation
+- Antibiothérapie systémique
+- Traitement étiologique
+- Surveillance évolution
+
+ABCÈS APICAL :
+- Drainage par voie canalaire
+- Incision si nécessaire
+- Irrigation antiseptique
+- Médication intra-canalaire
+- Antibiothérapie si diffusion
+
+ANTIBIOTIQUES :
+- Amoxicilline 1g x 3/jour (7 jours)
+- Clindamycine 300mg x 4/jour (allergie)
+- Métronidazole en association
+- Adaptation selon culture
+- Surveillance effets secondaires
+
+4. HÉMORRAGIES POST-OPÉRATOIRES
+
+ÉVALUATION :
+- Quantité et aspect du saignement
+- Localisation précise
+- Facteurs favorisants
+- Antécédents hémorragiques
+- Médications anticoagulantes
+
+PROTOCOLE :
+- Compression locale (20 min)
+- Nettoyage et visualisation
+- Suture si nécessaire
+- Agents hémostatiques
+- Surveillance continue
+
+AGENTS HÉMOSTATIQUES :
+- Acide tranexamique local
+- Éponges de collagène
+- Cire hémostatique
+- Électrocoagulation
+- Compression mécanique
+
+5. COMPLICATIONS POST-CHIRURGICALES
+
+ALVÉOLITE :
+- Nettoyage délicat alvéole
+- Irrigation antiseptique
+- Pansement alvéolaire
+- Antalgie adaptée
+- Contrôles rapprochés
+
+PARESTHÉSIE :
+- Évaluation neurologique
+- Tests sensitifs
+- Corticothérapie précoce
+- Vitaminothérapie B
+- Suivi neurologique
+
+COMMUNICATION D'URGENCE :
+- Explications claires
+- Réassurance patient
+- Instructions post-opératoires
+- Numéro d'urgence
+- Suivi programmé
+
+MATÉRIEL D'URGENCE :
+
+INSTRUMENTS :
+- Daviers d'extraction
+- Élévateurs
+- Curettes
+- Porte-aiguilles
+- Ciseaux chirurgicaux
+
+MÉDICATIONS :
+- Anesthésiques locaux
+- Vasoconstricteurs
+- Antalgiques
+- Anti-inflammatoires
+- Antibiotiques
+
+MATÉRIEL HÉMOSTATIQUE :
+- Compresses stériles
+- Éponges hémostatiques
+- Fils de suture
+- Cire hémostatique
+- Électrocoagulateur
+
+URGENCES MÉDICALES EN CABINET :
+
+1. MALAISE VAGAL
+- Position allongée, jambes surélevées
+- Surveillance pouls/tension
+- Aération de la pièce
+- Réassurance verbale
+- Récupération progressive
+
+2. RÉACTION ALLERGIQUE
+- Arrêt immédiat de l'allergène
+- Évaluation gravité
+- Antihistaminiques
+- Corticoïdes si nécessaire
+- Adrénaline si choc
+
+3. CRISE D'ASTHME
+- Position assise
+- Bronchodilatateurs
+- Oxygène si disponible
+- Éviter stress supplémentaire
+- Appel secours si sévère
+
+4. HYPOGLYCÉMIE
+- Sucre rapide per os
+- Surveillance conscience
+- Glucagon si inconscient
+- Contrôle glycémie
+- Prévention récidive
+
+NUMÉROS D'URGENCE :
+- Urgences : 144
+- Police : 117
+- Pompiers : 118
+- Toxicologie : 145
+- Médecin de garde : 0800 33 66 55
+
+TROUSSE D'URGENCE :
+- Oxygène portable
+- Ambu et masques
+- Adrénaline (ampoules)
+- Corticoïdes
+- Antihistaminiques
+- Bronchodilatateurs
+- Glucagon
+- Tensiomètre
+- Thermomètre
+- Matériel de perfusion
+
+FORMATION ÉQUIPE :
+- Recyclage annuel BLS
+- Gestes d'urgence
+- Utilisation matériel
+- Protocoles d'alerte
+- Coordination équipe 

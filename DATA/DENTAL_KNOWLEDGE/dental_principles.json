@@ -1,0 +1,400 @@
+{
+  "dental_principles": {
+    "retention_guidelines": {
+      "category": "Orthodontics",
+      "title": "Retention Guidelines",
+      "principles": [
+        {
+          "condition": "Lower anterior after orthodontic treatment",
+          "recommendation": "Fixed wire retention",
+          "duration": "Long-term to permanent",
+          "rationale": "Lower incisors have high tendency to relapse due to tongue pressure and growth"
+        },
+        {
+          "condition": "Upper arch after orthodontic treatment",
+          "recommendation": "Removable Essix retainer",
+          "duration": "Minimum 1 year full-time, then night-time indefinitely",
+          "rationale": "Maintains arch form and prevents relapse"
+        },
+        {
+          "condition": "Severe rotations or spacing",
+          "recommendation": "Extended retention period",
+          "duration": "2-3 years minimum",
+          "rationale": "Rotated teeth have high relapse potential due to periodontal fiber memory"
+        }
+      ]
+    },
+    "endodontic_protocols": {
+      "category": "Endodontics",
+      "title": "Root Canal Treatment Protocols",
+      "principles": [
+        {
+          "condition": "Vital pulp therapy",
+          "recommendation": "Single visit if no periapical pathology",
+          "duration": "1-2 hours",
+          "rationale": "Reduces bacterial contamination and patient visits"
+        },
+        {
+          "condition": "Necrotic pulp with periapical lesion",
+          "recommendation": "Multiple visit treatment",
+          "duration": "2-3 visits over 2-4 weeks",
+          "rationale": "Allows for disinfection and healing assessment"
+        },
+        {
+          "condition": "Calcium hydroxide dressing",
+          "recommendation": "Between visits for infected cases",
+          "duration": "1-2 weeks",
+          "rationale": "Antimicrobial action and pH elevation"
+        },
+        {
+          "condition": "Post-endodontic restoration",
+          "recommendation": "Crown within 3 months",
+          "duration": "Immediate to 3 months",
+          "rationale": "Prevents fracture of weakened tooth structure"
+        }
+      ]
+    },
+    "periodontal_guidelines": {
+      "category": "Periodontics",
+      "title": "Periodontal Treatment Guidelines",
+      "principles": [
+        {
+          "condition": "Gingivitis",
+          "recommendation": "Scaling and root planing",
+          "duration": "1-2 visits",
+          "rationale": "Remove plaque and calculus, restore gingival health"
+        },
+        {
+          "condition": "Mild periodontitis (4-5mm pockets)",
+          "recommendation": "Non-surgical periodontal therapy",
+          "duration": "2-4 visits over 2-4 weeks",
+          "rationale": "Conservative approach with good prognosis"
+        },
+        {
+          "condition": "Moderate to severe periodontitis (>6mm)",
+          "recommendation": "Surgical intervention consideration",
+          "duration": "Re-evaluation after 6-8 weeks",
+          "rationale": "Assess response to initial therapy"
+        },
+        {
+          "condition": "Maintenance therapy",
+          "recommendation": "Regular recalls every 3-6 months",
+          "duration": "Lifelong",
+          "rationale": "Prevent disease recurrence"
+        }
+      ]
+    },
+    "restorative_principles": {
+      "category": "Restorative Dentistry",
+      "title": "Restorative Treatment Principles",
+      "principles": [
+        {
+          "condition": "Small to moderate caries",
+          "recommendation": "Direct composite restoration",
+          "duration": "30-60 minutes",
+          "rationale": "Conservative, aesthetic, immediate function"
+        },
+        {
+          "condition": "Large caries or existing large restoration",
+          "recommendation": "Indirect restoration (inlay/onlay/crown)",
+          "duration": "2 visits over 2-3 weeks",
+          "rationale": "Better marginal adaptation and durability"
+        },
+        {
+          "condition": "Posterior crown preparation",
+          "recommendation": "Minimum 2mm occlusal reduction",
+          "duration": "45-90 minutes",
+          "rationale": "Adequate space for restoration material"
+        },
+        {
+          "condition": "Anterior crown preparation",
+          "recommendation": "1.5-2mm incisal reduction, 1mm facial",
+          "duration": "60-90 minutes",
+          "rationale": "Aesthetic requirements and material thickness"
+        }
+      ]
+    },
+    "implant_protocols": {
+      "category": "Implant Dentistry",
+      "title": "Dental Implant Protocols",
+      "principles": [
+        {
+          "condition": "Immediate implant placement",
+          "recommendation": "Extraction socket with intact walls",
+          "duration": "Same day as extraction",
+          "rationale": "Preserve alveolar bone and reduce treatment time"
+        },
+        {
+          "condition": "Delayed implant placement",
+          "recommendation": "6-8 weeks after extraction",
+          "duration": "Healing period required",
+          "rationale": "Soft tissue healing and initial bone remodeling"
+        },
+        {
+          "condition": "Osseointegration period",
+          "recommendation": "3-6 months before loading",
+          "duration": "3 months mandible, 6 months maxilla",
+          "rationale": "Adequate bone-implant integration"
+        },
+        {
+          "condition": "Bone grafting requirement",
+          "recommendation": "Adequate bone volume (10mm height, 6mm width)",
+          "duration": "4-6 months healing if grafted",
+          "rationale": "Ensure implant stability and success"
+        }
+      ]
+    },
+    "emergency_protocols": {
+      "category": "Emergency Dentistry",
+      "title": "Dental Emergency Protocols",
+      "principles": [
+        {
+          "condition": "Acute pulpitis",
+          "recommendation": "Immediate pulp extirpation or pulpotomy",
+          "duration": "Emergency visit + follow-up",
+          "rationale": "Pain relief and prevent further complications"
+        },
+        {
+          "condition": "Dental trauma - avulsed tooth",
+          "recommendation": "Replantation within 60 minutes",
+          "duration": "Emergency treatment",
+          "rationale": "Best prognosis for periodontal healing"
+        },
+        {
+          "condition": "Acute periodontal abscess",
+          "recommendation": "Drainage and irrigation",
+          "duration": "Emergency visit + antibiotics if systemic",
+          "rationale": "Immediate pain relief and infection control"
+        },
+        {
+          "condition": "Fractured restoration",
+          "recommendation": "Temporary restoration and sensitivity management",
+          "duration": "Emergency visit + scheduled repair",
+          "rationale": "Protect pulp and maintain function"
+        }
+      ]
+    },
+    "treatment_planning": {
+      "category": "Treatment Planning",
+      "title": "Treatment Planning Principles",
+      "principles": [
+        {
+          "condition": "Comprehensive treatment planning",
+          "recommendation": "Address urgent needs first, then systematic approach",
+          "duration": "Phased treatment over months",
+          "rationale": "Prioritize patient comfort and establish stable foundation"
+        },
+        {
+          "condition": "Sequencing periodontal and restorative treatment",
+          "recommendation": "Periodontal therapy before final restorations",
+          "duration": "Allow 6-8 weeks healing",
+          "rationale": "Stable periodontal foundation essential for long-term success"
+        },
+        {
+          "condition": "Occlusal considerations",
+          "recommendation": "Evaluate and adjust occlusion in all treatments",
+          "duration": "Throughout treatment phases",
+          "rationale": "Prevent premature contacts and ensure function"
+        },
+        {
+          "condition": "Maintenance planning",
+          "recommendation": "Establish recall schedule based on risk factors",
+          "duration": "3-6 month intervals typically",
+          "rationale": "Prevent disease recurrence and monitor restorations"
+        }
+      ]
+    },
+    "pain_management": {
+      "category": "Pain Management",
+      "title": "Dental Pain Management",
+      "principles": [
+        {
+          "condition": "Local anesthesia duration",
+          "recommendation": "Lidocaine 2% with epinephrine 1:100,000",
+          "duration": "90-120 minutes pulpal, 3-5 hours soft tissue",
+          "rationale": "Adequate anesthesia for most procedures"
+        },
+        {
+          "condition": "Post-operative pain management",
+          "recommendation": "NSAIDs as first line (ibuprofen 600-800mg)",
+          "duration": "Every 6-8 hours for 2-3 days",
+          "rationale": "Anti-inflammatory action addresses dental pain mechanism"
+        },
+        {
+          "condition": "Severe pain management",
+          "recommendation": "Combination therapy (NSAID + acetaminophen)",
+          "duration": "Alternating every 3-4 hours",
+          "rationale": "Synergistic effect, better pain control"
+        },
+        {
+          "condition": "Antibiotic prophylaxis",
+          "recommendation": "Only for specific medical conditions",
+          "duration": "Single dose 1 hour before procedure",
+          "rationale": "Prevent endocarditis in high-risk patients"
+        }
+      ]
+    },
+    "infection_control": {
+      "category": "Infection Control",
+      "title": "Infection Control Protocols",
+      "principles": [
+        {
+          "condition": "Sterilization protocols",
+          "recommendation": "Autoclave at 121°C for 15 minutes or 134°C for 3 minutes",
+          "duration": "Standard sterilization cycle",
+          "rationale": "Eliminate all microorganisms including spores"
+        },
+        {
+          "condition": "Hand hygiene",
+          "recommendation": "Surgical hand scrub or alcohol-based rub",
+          "duration": "Minimum 20 seconds",
+          "rationale": "Reduce bacterial load and prevent cross-contamination"
+        },
+        {
+          "condition": "Personal protective equipment",
+          "recommendation": "Gloves, mask, eye protection, gown",
+          "duration": "Throughout patient contact",
+          "rationale": "Barrier protection against infectious agents"
+        },
+        {
+          "condition": "Surface disinfection",
+          "recommendation": "EPA-approved hospital-grade disinfectant",
+          "duration": "Contact time per manufacturer",
+          "rationale": "Eliminate pathogens on environmental surfaces"
+        }
+      ]
+    }
+  },
+  "clinical_guidelines": {
+    "appointment_scheduling": {
+      "category": "Practice Management",
+      "title": "Appointment Scheduling Guidelines",
+      "guidelines": [
+        {
+          "procedure": "Routine cleaning and exam",
+          "duration": "45-60 minutes",
+          "frequency": "Every 6 months",
+          "notes": "Adjust frequency based on periodontal status"
+        },
+        {
+          "procedure": "Single surface restoration",
+          "duration": "30-45 minutes",
+          "frequency": "As needed",
+          "notes": "Add time for complex cases or multiple surfaces"
+        },
+        {
+          "procedure": "Crown preparation",
+          "duration": "60-90 minutes",
+          "frequency": "As needed",
+          "notes": "Include time for impression and temporary"
+        },
+        {
+          "procedure": "Root canal treatment",
+          "duration": "90-120 minutes",
+          "frequency": "1-3 visits",
+          "notes": "Anterior teeth may require less time"
+        },
+        {
+          "procedure": "Surgical extraction",
+          "duration": "45-60 minutes",
+          "frequency": "As needed",
+          "notes": "Complex cases may require longer"
+        }
+      ]
+    },
+    "follow_up_protocols": {
+      "category": "Patient Care",
+      "title": "Follow-up Care Protocols",
+      "guidelines": [
+        {
+          "procedure": "Post-extraction care",
+          "follow_up": "24-48 hours phone call",
+          "duration": "1 week healing check",
+          "notes": "Monitor for dry socket or complications"
+        },
+        {
+          "procedure": "Endodontic treatment",
+          "follow_up": "1 week post-treatment",
+          "duration": "6 months and 1 year radiographs",
+          "notes": "Assess healing and restoration needs"
+        },
+        {
+          "procedure": "Periodontal surgery",
+          "follow_up": "1 week suture removal",
+          "duration": "6 weeks healing assessment",
+          "notes": "Evaluate tissue response and healing"
+        },
+        {
+          "procedure": "Implant placement",
+          "follow_up": "1 week post-surgical",
+          "duration": "3-6 months integration check",
+          "notes": "Assess osseointegration before loading"
+        }
+      ]
+    }
+  },
+  "contraindications": {
+    "medical_contraindications": {
+      "category": "Medical Considerations",
+      "title": "Medical Contraindications",
+      "contraindications": [
+        {
+          "condition": "Uncontrolled diabetes",
+          "affected_procedures": ["Periodontal surgery", "Implant placement"],
+          "recommendation": "Stabilize blood sugar before elective procedures",
+          "rationale": "Poor wound healing and increased infection risk"
+        },
+        {
+          "condition": "Recent myocardial infarction",
+          "affected_procedures": ["Extensive procedures", "Surgery"],
+          "recommendation": "Defer elective treatment for 6 months",
+          "rationale": "Cardiovascular stress and medication interactions"
+        },
+        {
+          "condition": "Bisphosphonate therapy",
+          "affected_procedures": ["Extractions", "Periodontal surgery"],
+          "recommendation": "Assess BRONJ risk, consider drug holiday",
+          "rationale": "Risk of bisphosphonate-related osteonecrosis"
+        },
+        {
+          "condition": "Pregnancy",
+          "affected_procedures": ["Elective radiographs", "Elective surgery"],
+          "recommendation": "Defer to second trimester or postpartum",
+          "rationale": "Minimize fetal exposure and complications"
+        }
+      ]
+    }
+  },
+  "evidence_based_recommendations": {
+    "material_selection": {
+      "category": "Materials",
+      "title": "Evidence-Based Material Selection",
+      "recommendations": [
+        {
+          "clinical_situation": "Posterior direct restoration",
+          "material": "Composite resin",
+          "evidence_level": "High",
+          "rationale": "Excellent longevity and aesthetics compared to amalgam"
+        },
+        {
+          "clinical_situation": "Anterior direct restoration",
+          "material": "Nanohybrid composite",
+          "evidence_level": "High",
+          "rationale": "Superior polish retention and wear resistance"
+        },
+        {
+          "clinical_situation": "Posterior crown",
+          "material": "Monolithic zirconia or lithium disilicate",
+          "evidence_level": "High",
+          "rationale": "Excellent strength and biocompatibility"
+        },
+        {
+          "clinical_situation": "Anterior crown",
+          "material": "Lithium disilicate or layered zirconia",
+          "evidence_level": "High",
+          "rationale": "Optimal aesthetics and strength combination"
+        }
+      ]
+    }
+  }
+} 

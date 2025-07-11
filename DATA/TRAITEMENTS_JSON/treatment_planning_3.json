@@ -1,0 +1,5 @@
+{"consultation_text": "Plan de TT\n46 TR - 2 séance + Cpr O", "treatment_sequence": [
+  {"rdv": 1, "traitement": "46 Traitement de racine - Désinfection", "duree": "1h15", "delai": "", "dr": "IN", "date": "", "remarque": ""},
+  {"rdv": 2, "traitement": "46 Traitement de racine - Obturation", "duree": "1h15", "delai": "2jours", "dr": "IN", "date": "", "remarque": ""},
+  {"rdv": 3, "traitement": "46 Composite O", "duree": "1h", "delai": "", "dr": "IN", "date": "", "remarque": ""}
+]}

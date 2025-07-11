@@ -1,0 +1,68 @@
+{
+  "consultation_text": "Plan de ttt:\n17 OMP\n16 OM\n15 Onlay\n14 OD\n13 collet\n23 collet\n27 OMP\n36 collet\n47 OV\n46 collet\nDet + sondage paro",
+  "treatment_sequence": [
+    {
+      "rdv": 1,
+      "traitement": "Détartrage",
+      "duree": "1h",
+      "delai": "",
+      "dr": "VR",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 2,
+      "traitement": "Sondage paro",
+      "duree": "1h",
+      "delai": "",
+      "dr": "VR",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 3,
+      "traitement": "17 Composite OMP; 16 Composite OM; 15 TE onlay; 14 Composite OD",
+      "duree": "2h15",
+      "delai": "",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 4,
+      "traitement": "15 Scellement onlay; 13 Composite de collet; 23 Composite de collet",
+      "duree": "1h15",
+      "delai": "1sem.",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 5,
+      "traitement": "27 Composite OMV",
+      "duree": "1h30",
+      "delai": "",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 6,
+      "traitement": "36 Composite de collet",
+      "duree": "1h",
+      "delai": "",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 7,
+      "traitement": "47 Composite OV; 46 Composite de collet",
+      "duree": "1h15",
+      "delai": "",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    }
+  ]
+}

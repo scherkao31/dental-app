@@ -1,0 +1,105 @@
+# Environment variables and sensitive files
+.env
+*.env
+config.py
+secrets.py
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+database.db
+practice.db
+chroma_db/
+
+# Large temporary directories
+temp/
+
+# Document files (often large)
+*.docx
+*.doc
+*.pptx
+*.ppt
+~$*
+
+# Logs
+*.log
+logs/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Node modules (if any)
+node_modules/
+
+# API keys and credentials
+openai_key.txt
+api_keys.txt
+credentials.json
+
+# Backup files
+*.bak
+*.backup
+
+# PowerPoint template files that might be generated
+generated_*.pptx
+output_*.pptx
+
+# PDF files that might be generated
+*.pdf
+
+# Excel files that might contain sensitive data
+*.xlsx
+*.xls
+
+# Nested git repositories
+POWERPOINT/ 

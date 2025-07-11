@@ -1,0 +1,59 @@
+{
+  "consultation_text": "Plan de TT\n45 extr + pose implant immédiate\n41 cassé + à extraire solidarisée à 31 + pose impl immédiate",
+  "treatment_sequence": [
+    {
+      "rdv": 1,
+      "traitement": "41 Extraction avec séparation radiculaire + Pose implant avec greffe osseuse; 45 Pose implant avec greffe osseuse",
+      "duree": "3h",
+      "delai": "",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 2,
+      "traitement": "Contrôle post op",
+      "duree": "1sem.",
+      "delai": "1sem.",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 3,
+      "traitement": "Détartrage",
+      "duree": "1h",
+      "delai": "3mois",
+      "dr": "VR",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 4,
+      "traitement": "41i-45i Empreintes pour couronnes céramiques",
+      "duree": "30min.",
+      "delai": "1sem.",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 5,
+      "traitement": "41i-45i Scellement couronnes céramiques",
+      "duree": "30min.",
+      "delai": "1sem.",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 6,
+      "traitement": "Contrôle; 41i-45i Composites O",
+      "duree": "30min.",
+      "delai": "",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    }
+  ]
+}

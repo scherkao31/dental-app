@@ -1,0 +1,7 @@
+{"consultation_text": "Plan de TT\n11 AV + implant + CC\n22 Implant + CC\n21-34 Curtage", "treatment_sequence": [
+  {"rdv": 1, "traitement": "11 Avulsion", "duree": "30min", "delai": "", "dr": "NB", "date": "", "remarque": ""},
+  {"rdv": 2, "traitement": "11 Pose implant immédiat et Bio oss; 22 Pose implant", "duree": "2h", "delai": "", "dr": "NB", "date": "", "remarque": ""},
+  {"rdv": 3, "traitement": "Contrôle postop; 34 - 21 Curetage", "duree": "1h", "delai": "1sem.", "dr": "NB/VR", "date": "", "remarque": ""},
+  {"rdv": 4, "traitement": "11i-22i Empreintes pour couronnes transvissées sur implant", "duree": "30min.", "delai": "2mois", "dr": "NB", "date": "", "remarque": ""},
+  {"rdv": 5, "traitement": "11i-22i Scellement couronnes transvissées sur implant", "duree": "30min.", "delai": "1sem.", "dr": "NB", "date": "", "remarque": ""}
+]}

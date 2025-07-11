@@ -1,0 +1,59 @@
+{
+  "consultation_text": "Dét\n16 réprise TR + BNV + Onlay\n14 Collet + OD\n26 Collet\n35 Onlay\n45 OD\n47 OD\n48 OD + V",
+  "treatment_sequence": [
+    {
+      "rdv": 1,
+      "traitement": "16 BNV 1ère séance; 14 Composite V",
+      "duree": "1h30",
+      "delai": "",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 2,
+      "traitement": "16 BNV 2ème séance; 45 Composite OD; 47 Composite OD; 48 Composite OD + V",
+      "duree": "2h30",
+      "delai": "1 sem.",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 3,
+      "traitement": "16 BNV 3ème séance; 35 TE Onlay; 26 Composite V",
+      "duree": "1h30",
+      "delai": "1 sem.",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 4,
+      "traitement": "16 BNV 4ème séance; 35 Scellement Onlay",
+      "duree": "1h",
+      "delai": "1 sem.",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 5,
+      "traitement": "14 Composite OD; 16 TE Onlay",
+      "duree": "2h",
+      "delai": "1 sem.",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 6,
+      "traitement": "16 Scellement Onlay",
+      "duree": "1h",
+      "delai": "1 sem.",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    }
+  ]
+}

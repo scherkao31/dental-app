@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental AI Suite - Cabinet Dentaire Suisse</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-tooth"></i>
+                    <h1>Dental AI Suite</h1>
+                    <span class="subtitle">Cabinet Dentaire Suisse</span>
+                </div>
+                <div class="header-info">
+                    <span class="knowledge-badge">
+                        <i class="fas fa-database"></i>
+                        <span id="knowledge-count">Chargement...</span> cas de traitement
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <nav class="tab-navigation">
+            <!-- AI Assistant Section -->
+            <div class="tab-section">
+                <h3 class="tab-section-title">
+                    <i class="fas fa-brain"></i>
+                    Intelligence Artificielle
+                </h3>
+                <div class="tab-container">
+                    <button class="tab-button active" data-tab="dental-brain">
+                        <i class="fas fa-brain"></i>
+                        <span>Dental-Brain</span>
+                        <small>Planification de traitement</small>
+                    </button>
+                    <button class="tab-button" data-tab="swiss-law">
+                        <i class="fas fa-gavel"></i>
+                        <span>Droit Suisse</span>
+                        <small>Lois & réglementations</small>
+                    </button>
+                    <button class="tab-button" data-tab="invisalign">
+                        <i class="fas fa-smile"></i>
+                        <span>Invisalign</span>
+                        <small>Orthodontie invisible</small>
+                    </button>
+                    <button class="tab-button" data-tab="office-knowledge">
+                        <i class="fas fa-building"></i>
+                        <span>Cabinet</span>
+                        <small>Procédures internes</small>
+                    </button>
+                    <button class="tab-button" data-tab="insurance">
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Assurances</span>
+                        <small>Facturation & codes</small>
+                    </button>
+                    <button class="tab-button" data-tab="patient-comm">
+                        <i class="fas fa-comments"></i>
+                        <span>Communication</span>
+                        <small>Patients & éducation</small>
+                    </button>
+                    <button class="tab-button" data-tab="emergency">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>Urgences</span>
+                        <small>Protocoles d'urgence</small>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Practice Management Section -->
+            <div class="tab-section">
+                <h3 class="tab-section-title">
+                    <i class="fas fa-clinic-medical"></i>
+                    Gestion du Cabinet
+                </h3>
+                <div class="tab-container">
+                    <button class="tab-button" data-tab="patients">
+                        <i class="fas fa-users"></i>
+                        <span>Patients</span>
+                        <small>Gestion des patients</small>
+                    </button>
+                    <button class="tab-button" data-tab="dental-schema">
+                        <i class="fas fa-tooth"></i>
+                        <span>Schéma Dentaire</span>
+                        <small>Visualisation PowerPoint</small>
+                    </button>
+                    <button class="tab-button" data-tab="schedule">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Planning</span>
+                        <small>Agenda du cabinet</small>
+                    </button>
+                    <button class="tab-button" data-tab="finance-dashboard">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Finances</span>
+                        <small>Tableau de bord</small>
+                    </button>
+                    <button class="tab-button" data-tab="invoices">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        <span>Factures</span>
+                        <small>Devis & paiements</small>
+                    </button>
+                    <button class="tab-button" data-tab="pricing">
+                        <i class="fas fa-tags"></i>
+                        <span>Tarifs</span>
+                        <small>Grille tarifaire</small>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <!-- Dental-Brain Tab -->
+            <div class="tab-content active" id="dental-brain">
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages-dental-brain">
+                        <div class="welcome-message">
+                            <div class="welcome-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h2>Dental-Brain</h2>
+                            <p>Assistant IA spécialisé en planification de traitement dentaire</p>
+                            <div class="capabilities">
+                                <div class="capability">
+                                    <i class="fas fa-calendar-check"></i>
+                                    <span>Planification de traitement</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-clipboard-list"></i>
+                                    <span>Séquences de traitement</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-stethoscope"></i>
+                                    <span>Consultation clinique</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-tooth"></i>
+                                    <span>Analyse de cas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <div class="chat-input-wrapper">
+                            <textarea 
+                                id="chat-input-dental-brain" 
+                                placeholder="Décrivez votre cas clinique ou posez une question sur le traitement dentaire..."
+                                rows="1"
+                            ></textarea>
+                            <button class="send-button" data-target="dental-brain">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Patients Management Tab -->
+            <div class="tab-content" id="patients">
+                <div class="patients-container">
+                    <div class="patients-header">
+                        <h2><i class="fas fa-users"></i> Gestion des Patients</h2>
+                        <div class="patients-actions">
+                            <div class="search-container">
+                                <input type="text" id="patient-search" placeholder="Rechercher un patient...">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <button class="btn btn-primary" id="add-patient-btn">
+                                <i class="fas fa-plus"></i> Nouveau Patient
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="patients-content">
+                        <div class="patients-list" id="patients-list">
+                            <!-- Patient cards will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dental Schema Tab -->
+            <div class="tab-content" id="dental-schema">
+                <div class="dental-schema-container">
+                    <div class="dental-schema-header">
+                        <h2><i class="fas fa-tooth"></i> Schéma Dentaire Interactif</h2>
+                        <p>Générez des présentations PowerPoint personnalisées pour vos consultations</p>
+                    </div>
+                    
+                    <div class="dental-schema-content">
+                        <div class="input-section">
+                            <div class="form-group">
+                                <label for="treatment-input">Plan de traitement:</label>
+                                <textarea 
+                                    id="treatment-input" 
+                                    placeholder="Exemple: Plan de ttt pour la 26: 26 dém. CC + dém. tenons + TR 3 canaux + MA + CC"
+                                    rows="4"
+                                ></textarea>
+                                <small class="form-help">Saisissez le plan de traitement en français. Le système reconnaît automatiquement les traitements et les dents concernées.</small>
+                            </div>
+                            
+                            <div class="example-buttons">
+                                <h4>📝 Exemples rapides :</h4>
+                                <div class="example-grid">
+                                    <button class="example-btn" onclick="setTreatmentExample('Plan de ttt pour la 26: 26 dém. CC + dém. tenons + TR 3 canaux + MA + CC')">
+                                        Traitement endodontique + Couronne
+                                    </button>
+                                    <button class="example-btn" onclick="setTreatmentExample('Plan de TT 11 AV + implant + CC; 22 Implant + CC')">
+                                        Extraction + Implants
+                                    </button>
+                                    <button class="example-btn" onclick="setTreatmentExample('Plan de TT 12 à 22 F')">
+                                        Facettes multiples
+                                    </button>
+                                    <button class="example-btn" onclick="setTreatmentExample('Plan de TT 16 BNV + 17 GBR + 18 GC')">
+                                        Traitements spécialisés
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <button id="process-treatment-btn" class="btn btn-primary" onclick="processTreatmentPlan()">
+                                <span id="process-btn-text">Générer le Schéma Dentaire</span>
+                                <span id="process-btn-loader" class="loading-spinner" style="display: none;">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                </span>
+                            </button>
+                        </div>
+
+                        <div id="treatment-results" class="results-section" style="display: none;">
+                            <h3>Résultats du traitement</h3>
+                            <div id="treatment-results-content"></div>
+                            <div id="download-section" style="display: none;">
+                                <button id="download-ppt-btn" class="btn btn-success">
+                                    <i class="fas fa-download"></i> Télécharger la Présentation
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="treatment-error" class="error-section" style="display: none;">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Erreur</h3>
+                            <p id="treatment-error-message"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="help-section">
+                        <h3><i class="fas fa-question-circle"></i> Guide d'utilisation</h3>
+                        <div class="help-content">
+                            <div class="help-column">
+                                <h4>🎨 Traitements avec changement de couleur:</h4>
+                                <ul>
+                                    <li><strong>CC / CPR</strong> - Couronne céramique (or)</li>
+                                    <li><strong>CCi</strong> - Couronne sur implant (orange)</li>
+                                    <li><strong>Onlay / O</strong> - Onlay (argent)</li>
+                                    <li><strong>Facette / F</strong> - Facette céramique (bleu)</li>
+                                </ul>
+                                
+                                <h4>🔧 Traitements avec icônes:</h4>
+                                <ul>
+                                    <li><strong>Dém / TR / Endo</strong> - Traitement endodontique</li>
+                                    <li><strong>MA</strong> - Moignon adhésif</li>
+                                    <li><strong>Tenons</strong> - Tenons</li>
+                                    <li><strong>AV / Ext</strong> - Extraction</li>
+                                    <li><strong>Implant</strong> - Pose d'implant</li>
+                                    <li><strong>BNV / Blanch</strong> - Blanchissement interne</li>
+                                </ul>
+                            </div>
+                            <div class="help-column">
+                                <h4>🦷 Traitements spécialisés:</h4>
+                                <ul>
+                                    <li><strong>GBR</strong> - Greffe osseuse</li>
+                                    <li><strong>GC</strong> - Greffe gingivale</li>
+                                    <li><strong>SL</strong> - Sinus lift</li>
+                                    <li><strong>Curtage</strong> - Curetage</li>
+                                    <li><strong>Det / HD</strong> - Détartrage</li>
+                                    <li><strong>SF</strong> - Scellement de fissure</li>
+                                </ul>
+                                
+                                <h4>📋 Composites par localisation:</h4>
+                                <ul>
+                                    <li><strong>M / D</strong> - Mésial / Distal</li>
+                                    <li><strong>MO / DO / MOD</strong> - Mésio-occlusal / etc.</li>
+                                    <li><strong>L / P / V</strong> - Lingual / Palatin / Vestibulaire</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="dental-numbering">
+                            <h4>🦷 Système de numérotation FDI:</h4>
+                            <div class="numbering-grid">
+                                <div class="quadrant">
+                                    <h5>Supérieur droit</h5>
+                                    <span>11-18</span>
+                                </div>
+                                <div class="quadrant">
+                                    <h5>Supérieur gauche</h5>
+                                    <span>21-28</span>
+                                </div>
+                                <div class="quadrant">
+                                    <h5>Inférieur gauche</h5>
+                                    <span>31-38</span>
+                                </div>
+                                <div class="quadrant">
+                                    <h5>Inférieur droit</h5>
+                                    <span>41-48</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Schedule Management Tab -->
+            <div class="tab-content" id="schedule">
+                <div class="schedule-container">
+                    <div class="schedule-header">
+                        <h2><i class="fas fa-calendar-alt"></i> Planning du Cabinet</h2>
+                        <div class="schedule-actions">
+                            <div class="date-navigation">
+                                <button class="btn btn-secondary" id="prev-week">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <span id="current-week-display">Semaine du ...</span>
+                                <button class="btn btn-secondary" id="next-week">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <button class="btn btn-primary" id="add-appointment-btn">
+                                <i class="fas fa-plus"></i> Nouveau RDV
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-main-content">
+                        <div class="schedule-grid-container">
+                            <div class="schedule-grid" id="schedule-grid">
+                                <!-- Schedule will be loaded here -->
+                            </div>
+                        </div>
+                        
+                        <div class="schedule-chat-container">
+                            <div class="schedule-chat-header">
+                                <h3><i class="fas fa-robot"></i> Assistant Planification</h3>
+                                <p>Gérez votre planning intelligemment</p>
+                            </div>
+                            
+                            <div class="chat-messages" id="chat-messages-schedule">
+                                <div class="welcome-message">
+                                    <div class="welcome-icon">
+                                        <i class="fas fa-calendar-check"></i>
+                                    </div>
+                                    <h3>Assistant Planification Intelligente</h3>
+                                    <p>Je peux vous aider à gérer votre planning de manière optimale</p>
+                                    <div class="capabilities">
+                                        <div class="capability">
+                                            <i class="fas fa-exchange-alt"></i>
+                                            <span>Reprogrammer des RDV</span>
+                                        </div>
+                                        <div class="capability">
+                                            <i class="fas fa-user-clock"></i>
+                                            <span>Optimiser les créneaux</span>
+                                        </div>
+                                        <div class="capability">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                            <span>Gérer les urgences</span>
+                                        </div>
+                                        <div class="capability">
+                                            <i class="fas fa-brain"></i>
+                                            <span>Suggestions intelligentes</span>
+                                        </div>
+                                    </div>
+                                    <div class="example-queries">
+                                        <p><strong>Exemples de demandes :</strong></p>
+                                        <ul>
+                                            <li>"Je ne serai pas là vendredi, reprogramme tous mes RDV"</li>
+                                            <li>"Trouve-moi un créneau d'urgence pour demain matin"</li>
+                                            <li>"Optimise ma journée de lundi pour finir plus tôt"</li>
+                                            <li>"Déplace le RDV de 14h à un autre moment"</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="chat-input-container">
+                                <div class="chat-input-wrapper">
+                                    <textarea 
+                                        id="chat-input-schedule" 
+                                        placeholder="Demandez-moi de modifier votre planning..."
+                                        rows="1"
+                                    ></textarea>
+                                    <button class="send-button" data-target="schedule">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Swiss Law Tab -->
+            <div class="tab-content" id="swiss-law">
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages-swiss-law">
+                        <div class="welcome-message">
+                            <div class="welcome-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <h2>Droit Dentaire Suisse</h2>
+                            <p>Assistant spécialisé en législation et réglementations dentaires suisses</p>
+                            <div class="capabilities">
+                                <div class="capability">
+                                    <i class="fas fa-balance-scale"></i>
+                                    <span>Lois fédérales</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Réglementations cantonales</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Responsabilité professionnelle</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-user-shield"></i>
+                                    <span>Protection des données</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <div class="chat-input-wrapper">
+                            <textarea 
+                                id="chat-input-swiss-law" 
+                                placeholder="Posez une question sur la législation dentaire suisse..."
+                                rows="1"
+                            ></textarea>
+                            <button class="send-button" data-target="swiss-law">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Invisalign Tab -->
+            <div class="tab-content" id="invisalign">
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages-invisalign">
+                        <div class="welcome-message">
+                            <div class="welcome-icon">
+                                <i class="fas fa-smile"></i>
+                            </div>
+                            <h2>Invisalign Specialist</h2>
+                            <p>Assistant expert en orthodontie invisible et traitement Invisalign</p>
+                            <div class="capabilities">
+                                <div class="capability">
+                                    <i class="fas fa-search"></i>
+                                    <span>Sélection de cas</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Planification ClinCheck</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-tools"></i>
+                                    <span>Attachements & IPR</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Suivi de progression</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <div class="chat-input-wrapper">
+                            <textarea 
+                                id="chat-input-invisalign" 
+                                placeholder="Posez une question sur Invisalign ou l'orthodontie invisible..."
+                                rows="1"
+                            ></textarea>
+                            <button class="send-button" data-target="invisalign">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Office Knowledge Tab -->
+            <div class="tab-content" id="office-knowledge">
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages-office-knowledge">
+                        <div class="welcome-message">
+                            <div class="welcome-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h2>Base de Connaissances Cabinet</h2>
+                            <p>Assistant pour les procédures internes et FAQ du cabinet</p>
+                            <div class="capabilities">
+                                <div class="capability">
+                                    <i class="fas fa-clipboard-check"></i>
+                                    <span>Procédures administratives</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span>FAQ du personnel</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Gestion des rendez-vous</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-users"></i>
+                                    <span>Protocoles équipe</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <div class="chat-input-wrapper">
+                            <textarea 
+                                id="chat-input-office-knowledge" 
+                                placeholder="Posez une question sur les procédures du cabinet..."
+                                rows="1"
+                            ></textarea>
+                            <button class="send-button" data-target="office-knowledge">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Insurance Tab -->
+            <div class="tab-content" id="insurance">
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages-insurance">
+                        <div class="welcome-message">
+                            <div class="welcome-icon">
+                                <i class="fas fa-file-invoice"></i>
+                            </div>
+                            <h2>Assurances & Facturation</h2>
+                            <p>Assistant spécialisé en codes tarifaires et remboursements suisses</p>
+                            <div class="capabilities">
+                                <div class="capability">
+                                    <i class="fas fa-calculator"></i>
+                                    <span>Codes TARMED</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>Remboursements LAMal</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>Facturation privée</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-handshake"></i>
+                                    <span>Assurances complémentaires</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <div class="chat-input-wrapper">
+                            <textarea 
+                                id="chat-input-insurance" 
+                                placeholder="Posez une question sur les assurances ou la facturation..."
+                                rows="1"
+                            ></textarea>
+                            <button class="send-button" data-target="insurance">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Patient Communication Tab -->
+            <div class="tab-content" id="patient-comm">
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages-patient-comm">
+                        <div class="welcome-message">
+                            <div class="welcome-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h2>Communication Patient</h2>
+                            <p>Assistant pour l'éducation et la communication avec les patients</p>
+                            <div class="capabilities">
+                                <div class="capability">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Éducation patient</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-file-medical"></i>
+                                    <span>Instructions post-op</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Templates de communication</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-heart"></i>
+                                    <span>Gestion de l'anxiété</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <div class="chat-input-wrapper">
+                            <textarea 
+                                id="chat-input-patient-comm" 
+                                placeholder="Demandez de l'aide pour communiquer avec un patient..."
+                                rows="1"
+                            ></textarea>
+                            <button class="send-button" data-target="patient-comm">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emergency Tab -->
+            <div class="tab-content" id="emergency">
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages-emergency">
+                        <div class="welcome-message">
+                            <div class="welcome-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <h2>Protocoles d'Urgence</h2>
+                            <p>Assistant pour les situations d'urgence et protocoles médicaux</p>
+                            <div class="capabilities">
+                                <div class="capability">
+                                    <i class="fas fa-ambulance"></i>
+                                    <span>Urgences médicales</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-pills"></i>
+                                    <span>Interactions médicamenteuses</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-heartbeat"></i>
+                                    <span>Conditions systémiques</span>
+                                </div>
+                                <div class="capability">
+                                    <i class="fas fa-phone"></i>
+                                    <span>Contacts d'urgence</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <div class="chat-input-wrapper">
+                            <textarea 
+                                id="chat-input-emergency" 
+                                placeholder="Posez une question sur les protocoles d'urgence..."
+                                rows="1"
+                            ></textarea>
+                            <button class="send-button" data-target="emergency">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finance Dashboard Tab -->
+            <div class="tab-content" id="finance-dashboard">
+                <div class="finance-dashboard-container">
+                    <div class="dashboard-header">
+                        <h2><i class="fas fa-chart-line"></i> Tableau de Bord Financier</h2>
+                        <div class="dashboard-actions">
+                            <button class="btn btn-primary" id="refresh-dashboard">
+                                <i class="fas fa-sync-alt"></i> Actualiser
+                            </button>
+                            <button class="btn btn-secondary" id="export-financial-report">
+                                <i class="fas fa-file-excel"></i> Exporter
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-content">
+                        <!-- Key Metrics -->
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-euro-sign"></i>
+                                </div>
+                                <div class="metric-content">
+                                    <h3 id="current-month-revenue">0 CHF</h3>
+                                    <p>Revenus ce mois</p>
+                                    <span class="metric-change" id="revenue-change">+0%</span>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="metric-content">
+                                    <h3 id="pending-payments">0 CHF</h3>
+                                    <p>Paiements en attente</p>
+                                    <span class="metric-change" id="pending-count">0 factures</span>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-percentage"></i>
+                                </div>
+                                <div class="metric-content">
+                                    <h3 id="collection-rate">0%</h3>
+                                    <p>Taux de recouvrement</p>
+                                    <span class="metric-change" id="collection-trend">Stable</span>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div class="metric-content">
+                                    <h3 id="top-patient-value">0 CHF</h3>
+                                    <p>Meilleur patient</p>
+                                    <span class="metric-change" id="top-patient-name">-</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Charts -->
+                        <div class="charts-grid">
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3>Évolution des Revenus</h3>
+                                    <div class="chart-controls">
+                                        <select id="revenue-period">
+                                            <option value="12">12 mois</option>
+                                            <option value="6">6 mois</option>
+                                            <option value="3">3 mois</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="chart-container">
+                                    <canvas id="revenue-chart"></canvas>
+                                </div>
+                            </div>
+                            
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3>Statut des Paiements</h3>
+                                </div>
+                                <div class="chart-container">
+                                    <canvas id="payment-status-chart"></canvas>
+                                </div>
+                            </div>
+                            
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3>Traitements les Plus Rentables</h3>
+                                </div>
+                                <div class="chart-container">
+                                    <canvas id="treatments-chart"></canvas>
+                                </div>
+                            </div>
+                            
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3>Patients les Plus Actifs</h3>
+                                </div>
+                                <div class="chart-container">
+                                    <div id="top-patients-list"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Invoices Tab -->
+            <div class="tab-content" id="invoices">
+                <div class="invoices-container">
+                    <div class="invoices-header">
+                        <h2><i class="fas fa-file-invoice-dollar"></i> Factures et Devis</h2>
+                        <div class="invoices-actions">
+                            <div class="search-container">
+                                <input type="text" id="invoice-search" placeholder="Rechercher une facture...">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <select id="invoice-status-filter">
+                                <option value="">Tous les statuts</option>
+                                <option value="pending">En attente</option>
+                                <option value="partial">Partiellement payé</option>
+                                <option value="paid">Payé</option>
+                            </select>
+                            <button class="btn btn-primary" id="create-invoice-btn">
+                                <i class="fas fa-plus"></i> Nouvelle Facture
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="invoices-content">
+                        <div class="invoices-table-container">
+                            <table class="invoices-table" id="invoices-table">
+                                <thead>
+                                    <tr>
+                                        <th>N° Facture</th>
+                                        <th>Patient</th>
+                                        <th>Date</th>
+                                        <th>Montant Total</th>
+                                        <th>LAMal</th>
+                                        <th>À Payer</th>
+                                        <th>Statut</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="invoices-tbody">
+                                    <!-- Invoice rows will be loaded here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing Tab -->
+            <div class="tab-content" id="pricing">
+                <div class="pricing-container">
+                    <div class="pricing-header">
+                        <h2><i class="fas fa-tags"></i> Grille Tarifaire Suisse</h2>
+                        <div class="pricing-actions">
+                            <div class="search-container">
+                                <input type="text" id="pricing-search" placeholder="Rechercher un traitement...">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <select id="pricing-category-filter">
+                                <option value="">Toutes les catégories</option>
+                                <option value="Consultation">Consultation</option>
+                                <option value="Radiologie">Radiologie</option>
+                                <option value="Prophylaxie">Prophylaxie</option>
+                                <option value="Composite">Composite</option>
+                                <option value="Endodontie">Endodontie</option>
+                                <option value="Chirurgie">Chirurgie</option>
+                                <option value="Prothèse">Prothèse</option>
+                                <option value="Implantologie">Implantologie</option>
+                                <option value="Parodontologie">Parodontologie</option>
+                                <option value="Orthodontie">Orthodontie</option>
+                                <option value="Esthétique">Esthétique</option>
+                            </select>
+                            <button class="btn btn-secondary" id="export-pricing-btn">
+                                <i class="fas fa-file-excel"></i> Exporter
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-content">
+                        <div class="pricing-table-container">
+                            <table class="pricing-table" id="pricing-table">
+                                <thead>
+                                    <tr>
+                                        <th>Code TARMED</th>
+                                        <th>Traitement</th>
+                                        <th>Catégorie</th>
+                                        <th>Prix (CHF)</th>
+                                        <th>LAMal</th>
+                                        <th>Remboursement</th>
+                                        <th>Durée</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="pricing-tbody">
+                                    <!-- Pricing rows will be loaded here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Include Chart.js for financial charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html> 

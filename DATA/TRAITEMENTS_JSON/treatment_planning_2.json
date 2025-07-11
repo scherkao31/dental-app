@@ -1,0 +1,7 @@
+{"consultation_text": "Plan de TT\n12 à 22 F", "treatment_sequence": [
+  {"rdv": 1, "traitement": "Mock-up", "duree": "1h", "delai": "", "dr": "NB", "date": "", "remarque": ""},
+  {"rdv": 2, "traitement": "12 à 22 Préparation pour facette", "duree": "3h", "delai": "", "dr": "NB", "date": "", "remarque": ""},
+  {"rdv": 3, "traitement": "12 à 22 Essai", "duree": "1h", "delai": "1sem.", "dr": "NB", "date": "", "remarque": ""},
+  {"rdv": 4, "traitement": "12 à 22 Scellement facettes", "duree": "3h", "delai": "2jours", "dr": "NB", "date": "", "remarque": ""},
+  {"rdv": 5, "traitement": "Polissage", "duree": "1h", "delai": "", "dr": "NB", "date": "", "remarque": ""}
+]}

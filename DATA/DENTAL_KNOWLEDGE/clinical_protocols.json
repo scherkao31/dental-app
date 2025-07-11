@@ -1,0 +1,331 @@
+{
+  "clinical_protocols": {
+    "root_canal_procedure": {
+      "category": "Endodontics",
+      "title": "Root Canal Treatment Protocol",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Diagnosis and treatment planning",
+          "details": "Clinical examination, radiographs, pulp vitality tests",
+          "time": "15-20 minutes",
+          "critical_points": ["Confirm diagnosis", "Assess restorability", "Patient consent"]
+        },
+        {
+          "step": 2,
+          "action": "Local anesthesia and isolation",
+          "details": "Profound anesthesia, rubber dam placement",
+          "time": "10-15 minutes",
+          "critical_points": ["Ensure complete numbness", "Proper isolation", "Disinfection"]
+        },
+        {
+          "step": 3,
+          "action": "Access cavity preparation",
+          "details": "Conservative access, remove all caries",
+          "time": "15-20 minutes",
+          "critical_points": ["Straight-line access", "Preserve tooth structure", "Locate all canals"]
+        },
+        {
+          "step": 4,
+          "action": "Canal exploration and working length",
+          "details": "Initial file exploration, electronic apex locator",
+          "time": "20-30 minutes",
+          "critical_points": ["Patency", "Working length accuracy", "Canal negotiation"]
+        },
+        {
+          "step": 5,
+          "action": "Cleaning and shaping",
+          "details": "Rotary instrumentation, copious irrigation",
+          "time": "30-45 minutes",
+          "critical_points": ["Maintain apical patency", "Adequate irrigation", "Proper taper"]
+        },
+        {
+          "step": 6,
+          "action": "Obturation",
+          "details": "Gutta-percha and sealer, lateral or warm vertical",
+          "time": "20-30 minutes",
+          "critical_points": ["Adequate seal", "Proper length", "No voids"]
+        },
+        {
+          "step": 7,
+          "action": "Restoration",
+          "details": "Temporary or permanent restoration",
+          "time": "15-20 minutes",
+          "critical_points": ["Coronal seal", "Occlusal adjustment", "Post-op instructions"]
+        }
+      ]
+    },
+    "crown_preparation": {
+      "category": "Restorative",
+      "title": "Crown Preparation Protocol",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Pre-operative assessment",
+          "details": "Radiographs, vitality tests, occlusal analysis",
+          "time": "10-15 minutes",
+          "critical_points": ["Pulp vitality", "Periodontal health", "Occlusal scheme"]
+        },
+        {
+          "step": 2,
+          "action": "Anesthesia and gingival management",
+          "details": "Local anesthesia, retraction cord placement",
+          "time": "10-15 minutes",
+          "critical_points": ["Adequate anesthesia", "Hemostasis", "Gingival displacement"]
+        },
+        {
+          "step": 3,
+          "action": "Occlusal reduction",
+          "details": "2mm reduction following anatomical form",
+          "time": "15-20 minutes",
+          "critical_points": ["Adequate clearance", "Uniform reduction", "Functional cusp preservation"]
+        },
+        {
+          "step": 4,
+          "action": "Axial reduction",
+          "details": "1.5mm reduction, taper 6-10 degrees",
+          "time": "20-25 minutes",
+          "critical_points": ["Proper taper", "Smooth walls", "Avoid undercuts"]
+        },
+        {
+          "step": 5,
+          "action": "Margin preparation",
+          "details": "Chamfer or shoulder margin, supragingival when possible",
+          "time": "10-15 minutes",
+          "critical_points": ["Continuous margin", "Proper width", "Smooth finish"]
+        },
+        {
+          "step": 6,
+          "action": "Impression and temporary",
+          "details": "Final impression, temporary crown fabrication",
+          "time": "20-25 minutes",
+          "critical_points": ["Accurate impression", "Proper temporary fit", "Occlusal adjustment"]
+        }
+      ]
+    },
+    "periodontal_scaling": {
+      "category": "Periodontics",
+      "title": "Scaling and Root Planing Protocol",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Patient assessment",
+          "details": "Medical history, periodontal examination, radiographs",
+          "time": "15-20 minutes",
+          "critical_points": ["Risk factors", "Pocket depths", "Bleeding indices"]
+        },
+        {
+          "step": 2,
+          "action": "Anesthesia",
+          "details": "Local anesthesia by quadrant",
+          "time": "5-10 minutes",
+          "critical_points": ["Adequate anesthesia", "Patient comfort", "Hemostasis"]
+        },
+        {
+          "step": 3,
+          "action": "Supragingival scaling",
+          "details": "Remove visible calculus and plaque",
+          "time": "15-20 minutes",
+          "critical_points": ["Complete removal", "Minimal tissue trauma", "Proper angulation"]
+        },
+        {
+          "step": 4,
+          "action": "Subgingival scaling",
+          "details": "Remove subgingival deposits",
+          "time": "20-30 minutes",
+          "critical_points": ["Tactile sensitivity", "Complete debridement", "Root surface smoothness"]
+        },
+        {
+          "step": 5,
+          "action": "Root planing",
+          "details": "Smooth root surfaces, remove endotoxins",
+          "time": "15-25 minutes",
+          "critical_points": ["Smooth surface", "Minimal tissue trauma", "Complete detoxification"]
+        },
+        {
+          "step": 6,
+          "action": "Irrigation and evaluation",
+          "details": "Saline irrigation, tissue assessment",
+          "time": "5-10 minutes",
+          "critical_points": ["Debris removal", "Hemostasis", "Complete debridement"]
+        }
+      ]
+    },
+    "implant_placement": {
+      "category": "Oral Surgery",
+      "title": "Dental Implant Placement Protocol",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Pre-surgical assessment",
+          "details": "CBCT analysis, surgical guide fabrication",
+          "time": "30-45 minutes",
+          "critical_points": ["Bone quality/quantity", "Anatomical structures", "Prosthetic planning"]
+        },
+        {
+          "step": 2,
+          "action": "Anesthesia and incision",
+          "details": "Local anesthesia, crestal incision",
+          "time": "10-15 minutes",
+          "critical_points": ["Adequate anesthesia", "Proper incision design", "Tissue preservation"]
+        },
+        {
+          "step": 3,
+          "action": "Flap elevation",
+          "details": "Full-thickness flap, bone exposure",
+          "time": "10-15 minutes",
+          "critical_points": ["Adequate visualization", "Tissue preservation", "Hemostasis"]
+        },
+        {
+          "step": 4,
+          "action": "Osteotomy preparation",
+          "details": "Sequential drilling, copious irrigation",
+          "time": "15-20 minutes",
+          "critical_points": ["Precise positioning", "Adequate cooling", "Proper depth"]
+        },
+        {
+          "step": 5,
+          "action": "Implant insertion",
+          "details": "Primary stability assessment",
+          "time": "10-15 minutes",
+          "critical_points": ["Proper torque", "Primary stability", "Correct positioning"]
+        },
+        {
+          "step": 6,
+          "action": "Closure and healing",
+          "details": "Cover screw, suturing, post-op instructions",
+          "time": "15-20 minutes",
+          "critical_points": ["Tension-free closure", "Proper healing", "Patient education"]
+        }
+      ]
+    }
+  },
+  "emergency_procedures": {
+    "pulpitis_management": {
+      "category": "Emergency",
+      "title": "Acute Pulpitis Management",
+      "immediate_steps": [
+        {
+          "priority": "High",
+          "action": "Pain assessment and anesthesia",
+          "details": "Profound local anesthesia, may require supplemental techniques",
+          "time": "10-15 minutes"
+        },
+        {
+          "priority": "High",
+          "action": "Pulp extirpation",
+          "details": "Access cavity, remove inflamed pulp tissue",
+          "time": "20-30 minutes"
+        },
+        {
+          "priority": "Medium",
+          "action": "Canal irrigation",
+          "details": "Copious irrigation with sodium hypochlorite",
+          "time": "10-15 minutes"
+        },
+        {
+          "priority": "Medium",
+          "action": "Medicament placement",
+          "details": "Calcium hydroxide or formocresol",
+          "time": "5-10 minutes"
+        },
+        {
+          "priority": "Low",
+          "action": "Temporary restoration",
+          "details": "Secure temporary filling",
+          "time": "10-15 minutes"
+        }
+      ]
+    },
+    "avulsed_tooth": {
+      "category": "Emergency",
+      "title": "Avulsed Tooth Management",
+      "time_critical_steps": [
+        {
+          "time_frame": "0-5 minutes",
+          "action": "Immediate assessment",
+          "details": "Check tooth integrity, root surface condition",
+          "critical_points": ["Handle by crown only", "Assess storage medium", "Time out of socket"]
+        },
+        {
+          "time_frame": "5-15 minutes",
+          "action": "Socket preparation",
+          "details": "Gentle irrigation, clot removal if present",
+          "critical_points": ["Minimal trauma", "Preserve periodontal ligament", "Hemostasis"]
+        },
+        {
+          "time_frame": "15-30 minutes",
+          "action": "Replantation",
+          "details": "Gentle repositioning, check occlusion",
+          "critical_points": ["Proper positioning", "Avoid excessive force", "Occlusal clearance"]
+        },
+        {
+          "time_frame": "30-45 minutes",
+          "action": "Stabilization",
+          "details": "Flexible splint for 7-10 days",
+          "critical_points": ["Physiologic mobility", "Oral hygiene access", "Patient comfort"]
+        }
+      ]
+    }
+  },
+  "post_operative_care": {
+    "extraction_aftercare": {
+      "category": "Oral Surgery",
+      "title": "Post-Extraction Care Instructions",
+      "immediate_care": [
+        {
+          "timeframe": "First 24 hours",
+          "instructions": [
+            "Bite on gauze for 30-45 minutes",
+            "No rinsing or spitting",
+            "Ice application 20 minutes on/off",
+            "Soft diet, avoid hot liquids",
+            "No smoking or alcohol"
+          ]
+        },
+        {
+          "timeframe": "24-48 hours",
+          "instructions": [
+            "Gentle warm salt water rinses",
+            "Resume normal oral hygiene (avoid extraction site)",
+            "Soft diet continuation",
+            "Monitor for complications"
+          ]
+        },
+        {
+          "timeframe": "48-72 hours",
+          "instructions": [
+            "Gradual return to normal diet",
+            "Continue gentle oral hygiene",
+            "Watch for signs of dry socket",
+            "Follow-up if concerns"
+          ]
+        }
+      ]
+    },
+    "endodontic_aftercare": {
+      "category": "Endodontics",
+      "title": "Post-Endodontic Care",
+      "care_instructions": [
+        {
+          "timeframe": "First 24 hours",
+          "instructions": [
+            "Expect mild discomfort",
+            "Take prescribed pain medication",
+            "Avoid chewing on treated tooth",
+            "Maintain oral hygiene"
+          ]
+        },
+        {
+          "timeframe": "1-7 days",
+          "instructions": [
+            "Gradual return to normal function",
+            "Continue pain medication as needed",
+            "Watch for swelling or severe pain",
+            "Schedule follow-up appointment"
+          ]
+        }
+      ]
+    }
+  }
+} 

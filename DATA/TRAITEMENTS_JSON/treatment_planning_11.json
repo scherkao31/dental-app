@@ -1,0 +1,77 @@
+{
+  "consultation_text": "Plan de TT\nAblation fil de contention sup et inf\nBlanchiment\n12 Carie M\n11-21 Facette\nNew fil de contention sup et inf",
+  "treatment_sequence": [
+    {
+      "rdv": 1,
+      "traitement": "Détartrage à organiser avec votre hygiéniste; Empreinte pour blanchiment",
+      "duree": "30 min",
+      "delai": "",
+      "dr": "VR",
+      "date": "",
+      "remarque": "1er Virement"
+    },
+    {
+      "rdv": 2,
+      "traitement": "Donner gouttières + produit de blanchiment",
+      "duree": "15 min",
+      "delai": "1 sem",
+      "dr": "VR",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 3,
+      "traitement": "Ctl post blanchiment; 12 cpr M; Déposer fil de contention sup; Empreinte pour wax-up",
+      "duree": "1h15",
+      "delai": "3 sem",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 4,
+      "traitement": "11-21 preparation pour facettes + empreinte + provisoires",
+      "duree": "2h",
+      "delai": "1 sem",
+      "dr": "NB",
+      "date": "",
+      "remarque": "2ème virement"
+    },
+    {
+      "rdv": 5,
+      "traitement": "11-21 essai",
+      "duree": "30 min",
+      "delai": "1 sem",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 6,
+      "traitement": "11-21 Scellement; Déposer fil de contention inf; Empreinte pour fil de contention sup et inf",
+      "duree": "2h",
+      "delai": "2 jours",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 7,
+      "traitement": "Scellement fil de contention sup et inf",
+      "duree": "1h",
+      "delai": "1 sem",
+      "dr": "VR",
+      "date": "",
+      "remarque": "3ème virement"
+    },
+    {
+      "rdv": 8,
+      "traitement": "Ctl final + organiser recall",
+      "duree": "15 min",
+      "delai": "1 sem",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    }
+  ]
+}

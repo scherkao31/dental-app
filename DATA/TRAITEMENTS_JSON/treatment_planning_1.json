@@ -1,0 +1,8 @@
+{"consultation_text": "Plan de ttt pour la 26:\n26 dém. CC + dém. tenons + TR 3 canaux + MA + CC", "treatment_sequence": [
+  {"rdv": 1, "traitement": "26 Ablation Couronne + Ablation tenons x2; Traitement radiculaire – Désinfection; Couronne provisoire", "duree": "2h", "delai": "", "dr": "NB", "date": "", "remarque": ""},
+  {"rdv": 2, "traitement": "26 Traitement radiculaire – Désinfection", "duree": "1h15", "delai": "1 sem", "dr": "NB", "date": "", "remarque": ""},
+  {"rdv": 3, "traitement": "26 Traitement radiculaire – Désinfection", "duree": "1h15", "delai": "1 sem", "dr": "NB", "date": "", "remarque": ""},
+  {"rdv": 4, "traitement": "26 Obturation + Moignon + Empreinte et Nouvelle provisoire", "duree": "2h", "delai": "1 sem", "dr": "NB", "date": "", "remarque": ""},
+  {"rdv": 5, "traitement": "26 Essai couronne", "duree": "30 min", "delai": "3 jours", "dr": "NB", "date": "", "remarque": ""},
+  {"rdv": 6, "traitement": "26 Scellement couronne", "duree": "30 min", "delai": "1 jour", "dr": "NB", "date": "", "remarque": ""}
+]}

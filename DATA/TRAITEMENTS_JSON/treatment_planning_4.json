@@ -1,0 +1,12 @@
+{"consultation_text": "Plan de TT\ninvisalign + fil de contention\nblanch.\n12-22 facette céram", "treatment_sequence": [
+  {"rdv": 1, "traitement": "Empreintes pour Invisalign; Empreintes pour blanchiment", "duree": "30min.", "delai": "", "dr": "VR", "date": "", "remarque": ""},
+  {"rdv": 2, "traitement": "Remise gouttières et produit de blanchiment; Détartrage", "duree": "1h", "delai": "1sem.", "dr": "VR", "date": "", "remarque": ""},
+  {"rdv": 3, "traitement": "Contrôle post blanchiment", "duree": "", "delai": "", "dr": "", "date": "", "remarque": ""},
+  {"rdv": 4, "traitement": "Début traitement Invisalign", "duree": "1h", "delai": "", "dr": "VR", "date": "", "remarque": ""},
+  {"rdv": 5, "traitement": "Fin traitement Invisalign; Empreinte pour Waxup", "duree": "30min.", "delai": "", "dr": "VR/NB", "date": "", "remarque": ""},
+  {"rdv": 6, "traitement": "Mock-up", "duree": "1h", "delai": "1sem.", "dr": "NB", "date": "", "remarque": ""},
+  {"rdv": 7, "traitement": "12-22 Préparation pour facette", "duree": "1h15", "delai": "", "dr": "NB", "date": "", "remarque": ""},
+  {"rdv": 8, "traitement": "12-22 Essai", "duree": "30min.", "delai": "1sem.", "dr": "NB", "date": "", "remarque": ""},
+  {"rdv": 9, "traitement": "12-22 Scellement facettes; Empreintes pour fil de contention SUP – INF", "duree": "2h", "delai": "2jours", "dr": "NB/VR", "date": "", "remarque": ""},
+  {"rdv": 10, "traitement": "12-22 Polissage; Scellement fil de contention SUP - INF", "duree": "1h15", "delai": "5jours", "dr": "NB/VR", "date": "", "remarque": ""}
+]}

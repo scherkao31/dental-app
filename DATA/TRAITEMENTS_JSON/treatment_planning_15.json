@@ -1,0 +1,77 @@
+{
+  "consultation_text": "Plan de TT\nBlanchiment\n46 Cpr collet\n16 Cpr V\nInvisalign Sup + Fil de contention sup et inf",
+  "treatment_sequence": [
+    {
+      "rdv": 1,
+      "traitement": "16-46 Cpr Collet",
+      "duree": "1h15",
+      "delai": "",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 2,
+      "traitement": "Det + empreinte Invisalign et blanchiment",
+      "duree": "1h30",
+      "delai": "",
+      "dr": "VR",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 3,
+      "traitement": "Donner gouttières blanchiment",
+      "duree": "15 min",
+      "delai": "1 sem",
+      "dr": "VR",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 4,
+      "traitement": "Contrôle fin blanchiment",
+      "duree": "15 min",
+      "delai": "2 sem",
+      "dr": "VR",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 5,
+      "traitement": "Début Invisalign",
+      "duree": "1h",
+      "delai": "3 mois",
+      "dr": "VR/NB",
+      "date": "",
+      "remarque": "Attention à partir d’Avril"
+    },
+    {
+      "rdv": 6,
+      "traitement": "Fin Invisalign + enlever taquets + empreinte pour fil de contention sup et inf",
+      "duree": "1h",
+      "delai": "",
+      "dr": "VR/NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 7,
+      "traitement": "Scellement fil de contention sup et inf",
+      "duree": "1h",
+      "delai": "",
+      "dr": "VR",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 8,
+      "traitement": "Contrôle final",
+      "duree": "15 min",
+      "delai": "1 mois",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    }
+  ]
+}

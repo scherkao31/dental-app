@@ -1,0 +1,50 @@
+{
+  "consultation_text": "Plan de ttt:\nBlanchiment\n11-21 facettes\n13-23 cpr\nGouttière sup",
+  "treatment_sequence": [
+    {
+      "rdv": 1,
+      "traitement": "Empreintes pour blanchiment",
+      "duree": "15min.",
+      "delai": "",
+      "dr": "VR",
+      "date": "",
+      "remarque": "Préparer un wax avec les empreintes"
+    },
+    {
+      "rdv": 2,
+      "traitement": "Remise gouttières + produit de blanchiment",
+      "duree": "15min.",
+      "delai": "1sem.",
+      "dr": "VR",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 3,
+      "traitement": "11-21 Préparation pour facettes; 13–23 Composites V",
+      "duree": "2h30",
+      "delai": "",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 4,
+      "traitement": "11–21 Scellement facettes céramiques; Empreintes pour gouttière Erkopress",
+      "duree": "2h15",
+      "delai": "1sem.",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 5,
+      "traitement": "Polissage; Remise gouttière Erkopress",
+      "duree": "1h",
+      "delai": "",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    }
+  ]
+}

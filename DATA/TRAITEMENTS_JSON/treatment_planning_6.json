@@ -1,0 +1,32 @@
+{
+  "consultation_text": "Plan de tt:\n13-14 /44-45 / 34 cpr collet",
+  "treatment_sequence": [
+    {
+      "rdv": 1,
+      "traitement": "13-14 composites de collet",
+      "duree": "45 min.",
+      "delai": "",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 2,
+      "traitement": "44-45 composites de collet",
+      "duree": "45 min.",
+      "delai": "",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 3,
+      "traitement": "34 composite de collet",
+      "duree": "30 min.",
+      "delai": "",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "consultation_text": "Plan de TT\n34 Collet + Onlay\n35 Dém.CC + MA + CC\n36 Dém CC + MA + CC\n33 Collet\n32 Collet\n31-41 BL\n24 Collet\n25-26-27 CC\n24 OD\n13 D\n14 à 17 CC",
+  "treatment_sequence": [
+    {
+      "rdv": 1,
+      "traitement": "Détartrage + empreintes pour modèles",
+      "duree": "1h",
+      "delai": "",
+      "dr": "VR",
+      "date": "Lundi 17 Mars à 10h",
+      "remarque": "Donner antibiotiques"
+    },
+    {
+      "rdv": 2,
+      "traitement": "35-36-37 démonter couronnes + provisoires",
+      "duree": "2h",
+      "delai": "2 jours",
+      "dr": "NB",
+      "date": "Mercredi 19 Mars à 11h",
+      "remarque": ""
+    },
+    {
+      "rdv": 3,
+      "traitement": "14-15-16-17 démonter couronnes + provisoires; 15 Séance de désinfection endo",
+      "duree": "2h15",
+      "delai": "",
+      "dr": "NB",
+      "date": "Mercredi 19 Mars à 14h45",
+      "remarque": ""
+    },
+    {
+      "rdv": 4,
+      "traitement": "22-25-26-27 démonter couronnes + provisoires",
+      "duree": "2h",
+      "delai": "",
+      "dr": "NB",
+      "date": "Jeudi 20 Mars à 10h",
+      "remarque": ""
+    },
+    {
+      "rdv": 5,
+      "traitement": "32-33-34 composite collet; 31-41 composite bord libre",
+      "duree": "1h30",
+      "delai": "",
+      "dr": "NB",
+      "date": "Jeudi 20 Mars à 15h30",
+      "remarque": "Discussion formes 11-21"
+    },
+    {
+      "rdv": 6,
+      "traitement": "13 Composite D; 24 Composite OD + V; 15 Obturation endo + Cpr",
+      "duree": "2h",
+      "delai": "",
+      "dr": "NB",
+      "date": "Lundi 24 Mars à 10h",
+      "remarque": ""
+    },
+    {
+      "rdv": 7,
+      "traitement": "Empreintes pour couronnes Sup et Inf",
+      "duree": "2h",
+      "delai": "",
+      "dr": "NB",
+      "date": "Lundi 24 Mars à 15h",
+      "remarque": ""
+    },
+    {
+      "rdv": 8,
+      "traitement": "Scellement sup et inf",
+      "duree": "2h",
+      "delai": "3 jours",
+      "dr": "NB",
+      "date": "Jeudi 27 Mars à 12h",
+      "remarque": ""
+    },
+    {
+      "rdv": 9,
+      "traitement": "PHASE 2 – GESTION OSTEONECROSE",
+      "duree": "",
+      "delai": "6 mois après dernière injection - courant juin",
+      "dr": "NB",
+      "date": "",
+      "remarque": "Débuter traitement ATB 2 jours avant et continuer pendant 2 semaines"
+    }
+  ]
+}

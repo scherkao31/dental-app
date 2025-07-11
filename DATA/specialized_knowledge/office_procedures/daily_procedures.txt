@@ -1,0 +1,126 @@
+TITRE: Procédures quotidiennes du cabinet dentaire
+CATÉGORIE: Gestion
+TYPE: Procédures internes
+
+CONTENU:
+
+PROCÉDURES D'OUVERTURE (7h30-8h00) :
+
+1. ACCUEIL ET RÉCEPTION
+- Déverrouillage du cabinet
+- Activation des systèmes (alarme, éclairage, ventilation)
+- Vérification des messages téléphoniques
+- Consultation de l'agenda du jour
+- Préparation des dossiers patients
+- Vérification des rendez-vous confirmés
+
+2. PRÉPARATION DES SALLES DE SOINS
+- Aération des salles
+- Vérification de la propreté
+- Contrôle des équipements (unit, aspiration, éclairage)
+- Préparation des instruments de base
+- Vérification des niveaux (eau, air comprimé)
+- Test des systèmes d'aspiration
+
+3. STÉRILISATION ET INSTRUMENTS
+- Sortie des instruments stérilisés
+- Vérification des indicateurs de stérilisation
+- Préparation des plateaux instruments
+- Contrôle des dates de péremption
+- Vérification du stock d'instruments
+
+PROCÉDURES ENTRE PATIENTS (15 min) :
+
+1. NETTOYAGE ET DÉSINFECTION
+- Évacuation des déchets contaminés
+- Désinfection des surfaces (unit, plan de travail, éclairage)
+- Nettoyage des instruments utilisés
+- Changement des protections jetables
+- Désinfection des mains
+
+2. PRÉPARATION PATIENT SUIVANT
+- Consultation du dossier
+- Préparation des instruments spécifiques
+- Vérification des matériaux nécessaires
+- Préparation de l'anesthésie si nécessaire
+- Mise à jour du planning
+
+PROCÉDURES DE FERMETURE (18h00-18h30) :
+
+1. NETTOYAGE FINAL
+- Nettoyage approfondi des salles
+- Désinfection complète des équipements
+- Évacuation de tous les déchets
+- Nettoyage des sols et surfaces
+- Fermeture des circuits eau/air
+
+2. STÉRILISATION
+- Nettoyage des instruments de la journée
+- Mise en route des cycles de stérilisation
+- Vérification des indicateurs
+- Rangement des instruments stérilisés
+- Contrôle du stock d'instruments
+
+3. ADMINISTRATION
+- Mise à jour des dossiers patients
+- Préparation des factures
+- Vérification de l'agenda du lendemain
+- Sauvegarde informatique
+- Fermeture de la caisse
+
+PROTOCOLES COVID-19 :
+
+1. AVANT CHAQUE PATIENT
+- Questionnaire de santé
+- Prise de température
+- Désinfection des mains
+- Port du masque obligatoire
+- Aération de la salle (15 min)
+
+2. PENDANT LES SOINS
+- EPI complets pour l'équipe
+- Aspiration haute puissance
+- Limitation des aérosols
+- Temps de traitement optimisé
+
+3. APRÈS CHAQUE PATIENT
+- Désinfection renforcée
+- Changement des EPI
+- Aération prolongée
+- Traçabilité des contacts
+
+GESTION DES URGENCES :
+
+1. URGENCES DENTAIRES
+- Évaluation téléphonique
+- Créneaux réservés (12h-14h)
+- Trousse d'urgence prête
+- Protocoles antidouleur
+- Orientation si nécessaire
+
+2. URGENCES MÉDICALES
+- Trousse de secours vérifiée
+- Numéros d'urgence affichés
+- Formation RCP de l'équipe
+- Protocoles par pathologie
+- Liaison avec services d'urgence
+
+CONTRÔLES QUALITÉ :
+
+QUOTIDIENS :
+- Température des réfrigérateurs
+- Fonctionnement des autoclaves
+- Qualité de l'eau
+- Propreté des surfaces
+
+HEBDOMADAIRES :
+- Test biologique stérilisation
+- Vérification des stocks
+- Maintenance préventive
+- Formation continue équipe
+
+MENSUELS :
+- Contrôle des procédures
+- Audit qualité interne
+- Mise à jour des protocoles
+- Évaluation de l'équipe 

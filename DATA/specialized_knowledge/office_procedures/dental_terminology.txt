@@ -1,0 +1,84 @@
+TERMINOLOGIE DENTAIRE - CABINET DENTAIRE
+
+=== ABRÉVIATIONS UTILISÉES AU CABINET ===
+
+TRAITEMENTS PRINCIPAUX:
+- CC: couronne - Prothèse fixe qui recouvre entièrement la dent
+- CCi: couronne sur implant - Couronne fixée sur un implant dentaire
+- Dém. CC: démonter couronne - Retrait d'une couronne existante
+- Dém. tenon: démonter tenon - Retrait d'un tenon radiculaire
+- MA: moignon adhésif - Reconstitution de la dent avec matériau adhésif
+- TR: traitement de racine - Traitement endodontique des canaux radiculaires
+- Pose i: pose d'implant - Chirurgie de placement d'implant dentaire
+- GBR: greffe osseuse - Greffe osseuse pour augmentation du volume osseux
+- GC: greffe de gencive - Greffe gingivale pour recouvrement radiculaire
+- SL: sinus lift - Élévation du plancher sinusien pour implant
+- AV: avulsion/extraction - Extraction dentaire
+- DDS: dent de sagesse - Troisième molaire
+- Abl.: ablation - Retrait chirurgical d'un élément
+- Endo: endodontie (TR) - Traitement endodontique
+- TTT: traitement - Traitement général
+- Prov: provisoire - Prothèse temporaire
+- BNV: blanchiment interne - Blanchiment d'une dent dévitalisée
+- Blanch/home bleaching: blanchiment - Éclaircissement dentaire
+- Det/HD/cleaning: détartrage - Nettoyage professionnel des dents
+- Fil de cont: fil de contention - Fil orthodontique de maintien
+- SF: scellement de fissure - Protection préventive des sillons
+
+COMPOSITES ET OBTURATIONS:
+- O: cpr occlusal - Composite sur la face occlusale (de mastication)
+- M: cpr mésial - Composite sur la face mésiale (vers l'avant)
+- D: cpr distal - Composite sur la face distale (vers l'arrière)
+- Interprox: cpr interproximal - Composite entre les dents
+- L: cpr lingual - Composite sur la face linguale (côté langue)
+- P: cpr palatin - Composite sur la face palatine (côté palais)
+- V: vestibulaire - Face externe de la dent (côté joue/lèvre)
+- MO ou OM: cpr mésio-occlusal - Composite sur faces mésiale et occlusale
+- DO ou OD: cpr occluso-distal - Composite sur faces occlusale et distale
+- MOD: cpr mésio-occluso-distal - Composite sur trois faces
+- Cpr: composite - Matériau de restauration esthétique
+- Ceram: céramique - Matériau prothétique esthétique
+- F: facette - Facette céramique collée
+
+PROCÉDURES CLINIQUES:
+- TE: taille empreinte - Préparation de la dent pour empreinte
+- SC: scellement - Collage définitif d'une prothèse
+- Empr.: empreinte - Moulage des dents pour prothèse
+- Post-op: post opératoire - Suivi après intervention
+
+LOCALISATION ANATOMIQUE:
+- Sup: supérieur - Maxillaire supérieur
+- Inf: inférieur - Mandibule (maxillaire inférieur)
+- DVO: dimension verticale de l'occlusion - Hauteur de l'occlusion
+- Augm. DVO: augmenter dimension verticale de l'occlusion - Rehaussement occlusal
+
+=== SÉQUENCES DE TRAITEMENT TYPES ===
+
+TRAITEMENT ENDODONTIQUE AVEC COURONNE:
+1. Dém. CC + Dém. tenon (si nécessaire)
+2. TR - Désinfection (plusieurs séances)
+3. Obturation canalaire
+4. MA (moignon adhésif)
+5. TE + Empr.
+6. Pose CC prov
+7. Essayage CC définitive
+8. SC CC définitive
+
+IMPLANT SIMPLE:
+1. AV dent
+2. Pose i
+3. Cicatrisation (3-6 mois)
+4. Empr. implant
+5. Essayage CCi
+6. SC CCi
+
+IMPLANT AVEC GREFFE:
+1. AV dent + GBR
+2. Cicatrisation osseuse (6 mois)
+3. Pose i
+4. Cicatrisation (3-6 mois)
+5. Empr. implant
+6. Essayage CCi
+7. SC CCi
+
+Cette terminologie doit être utilisée systématiquement dans tous les plans de traitement pour assurer la cohérence et la compréhension entre praticiens. 

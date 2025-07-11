@@ -1,0 +1,23 @@
+{
+  "consultation_text": "Plan de TT\n14 collet\n24 25 collet\n44 collet\n34 collet",
+  "treatment_sequence": [
+    {
+      "rdv": 1,
+      "traitement": "14 Composite de collet; 44 Composite de collet",
+      "duree": "1h15",
+      "delai": "",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    },
+    {
+      "rdv": 2,
+      "traitement": "23-24 Composite de collet; 34 Composite de collet",
+      "duree": "1h30",
+      "delai": "",
+      "dr": "NB",
+      "date": "",
+      "remarque": ""
+    }
+  ]
+}

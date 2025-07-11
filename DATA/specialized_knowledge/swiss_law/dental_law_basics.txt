@@ -1,0 +1,61 @@
+TITRE: Bases du droit dentaire suisse
+CATÉGORIE: Législation
+TYPE: Réglementation
+
+CONTENU:
+
+La pratique dentaire en Suisse est régie par plusieurs textes légaux fondamentaux :
+
+1. LOI FÉDÉRALE SUR LES PROFESSIONS MÉDICALES (LPMéd)
+- Article 3 : Définit les professions médicales universitaires incluant la médecine dentaire
+- Article 34 : Conditions d'obtention du diplôme fédéral de médecin-dentiste
+- Article 36 : Autorisation d'exercer la profession
+- Article 37 : Reconnaissance des diplômes étrangers
+
+2. ORDONNANCES CANTONALES
+Chaque canton dispose de sa propre ordonnance sur la pratique dentaire :
+- Conditions d'établissement
+- Obligations de formation continue
+- Contrôles de qualité
+- Sanctions disciplinaires
+
+3. RESPONSABILITÉ CIVILE
+Code des obligations (CO) :
+- Article 41 : Responsabilité en cas de dommage
+- Article 398 : Responsabilité du mandataire (relation dentiste-patient)
+- Article 55 : Prescription des actions en responsabilité (10 ans)
+
+4. PROTECTION DES DONNÉES
+Loi fédérale sur la protection des données (LPD) :
+- Consentement éclairé du patient
+- Droit d'accès aux données médicales
+- Obligation de confidentialité
+- Conservation des dossiers (10 ans minimum)
+
+5. ASSURANCE MALADIE
+Loi fédérale sur l'assurance-maladie (LAMal) :
+- Prestations remboursées
+- Tarifs TARMED
+- Obligations de facturation
+- Contrôles de l'assurance
+
+6. DÉONTOLOGIE
+Code de déontologie FMH/SSO :
+- Secret médical
+- Publicité médicale
+- Conflits d'intérêts
+- Formation continue obligatoire
+
+AUTORITÉS COMPÉTENTES :
+- OFSP (Office fédéral de la santé publique)
+- Autorités cantonales de surveillance
+- Commissions de déontologie
+- Tribunaux civils et pénaux
+
+SANCTIONS POSSIBLES :
+- Avertissement
+- Blâme
+- Amende
+- Suspension temporaire
+- Retrait d'autorisation
+- Poursuites pénales 
