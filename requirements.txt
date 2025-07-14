@@ -16,4 +16,5 @@ sentence-transformers==2.2.2
 huggingface_hub==0.12.1
 transformers==4.26.1
 torch==1.13.1
+torchvision==0.14.1
 fpdf2==2.8.3 
