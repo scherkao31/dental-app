@@ -5380,22 +5380,17 @@ def execute_single_reschedule(decision):
         }
 
 if __name__ == '__main__':
-    print("🚀 Starting Enhanced Dental Practice Management System...")
-    print("📊 Database initialized")
-    print("🧠 RAG system ready")
-    print("🔧 Multi-LLM architecture active")
-    print("🏥 Practice management features enabled")
-    print("🎯 PowerPoint generation system integrated")
-    
-    # Get port from environment variable (for Render deployment)
-    port = int(os.getenv('PORT', 5001))
-    
-    # Determine if we're in production
-    is_production = os.getenv('RENDER') is not None
-    
-    if is_production:
-        print(f"🌐 Production server starting on port {port}")
-        app.run(debug=False, host='0.0.0.0', port=port)
+    # Check if running in production (Render sets this)
+    if os.getenv('RENDER'):
+        # Production mode - use proper settings
+        port = int(os.getenv('PORT', 5000))
+        app.run(
+            host='0.0.0.0',
+            port=port,
+            debug=False,
+            threaded=True,  # Enable threading for better performance
+            use_reloader=False  # Disable reloader in production
+        )
     else:
-        print(f"🌐 Development server starting on http://localhost:{port}")
-        app.run(debug=True, host='0.0.0.0', port=port) 
+        # Development mode
+        app.run(debug=True, port=5000) 
