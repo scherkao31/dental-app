@@ -3,14 +3,98 @@ import json
 from datetime import datetime, timedelta
 from typing import List, Dict, Optional, Any
 import uuid
+import os
+import psycopg2
+from psycopg2.extras import RealDictCursor
+from urllib.parse import urlparse
 
 class PracticeDatabase:
     def __init__(self, db_path: str = "practice.db"):
         self.db_path = db_path
+        self.db_type = self._determine_db_type()
         self.init_database()
     
+    def _determine_db_type(self):
+        """Determine database type based on environment"""
+        database_url = os.getenv('DATABASE_URL')
+        if database_url and database_url.startswith('postgresql'):
+            return 'postgresql'
+        return 'sqlite'
+    
+    def _get_connection(self):
+        """Get database connection based on type"""
+        if self.db_type == 'postgresql':
+            database_url = os.getenv('DATABASE_URL')
+            if not database_url:
+                raise ValueError("DATABASE_URL environment variable is required for PostgreSQL")
+            
+            # Parse the database URL
+            parsed = urlparse(database_url)
+            
+            return psycopg2.connect(
+                host=parsed.hostname,
+                database=parsed.path[1:],  # Remove leading slash
+                user=parsed.username,
+                password=parsed.password,
+                port=parsed.port or 5432,
+                cursor_factory=RealDictCursor
+            )
+        else:
+            return sqlite3.connect(self.db_path)
+    
+    def _execute_query(self, query: str, params: tuple = None, fetch_one: bool = False, fetch_all: bool = False):
+        """Execute query with proper connection handling"""
+        conn = self._get_connection()
+        
+        try:
+            if self.db_type == 'postgresql':
+                cursor = conn.cursor()
+                cursor.execute(query, params or ())
+                
+                if fetch_one:
+                    result = cursor.fetchone()
+                    return dict(result) if result else None
+                elif fetch_all:
+                    results = cursor.fetchall()
+                    return [dict(row) for row in results]
+                else:
+                    conn.commit()
+                    return cursor.rowcount
+            else:
+                cursor = conn.cursor()
+                cursor.execute(query, params or ())
+                
+                if fetch_one:
+                    result = cursor.fetchone()
+                    if result:
+                        columns = [desc[0] for desc in cursor.description]
+                        return dict(zip(columns, result))
+                    return None
+                elif fetch_all:
+                    results = cursor.fetchall()
+                    columns = [desc[0] for desc in cursor.description]
+                    return [dict(zip(columns, row)) for row in results]
+                else:
+                    conn.commit()
+                    return cursor.rowcount
+        finally:
+            conn.close()
+
     def init_database(self):
         """Initialize the database with required tables"""
+        # PostgreSQL and SQLite have slightly different syntax
+        if self.db_type == 'postgresql':
+            self._init_postgresql()
+        else:
+            self._init_sqlite()
+        
+        # Initialize pricing data
+        self.initialize_swiss_pricing()
+        
+        print(f"✅ Database initialized successfully ({self.db_type})")
+    
+    def _init_sqlite(self):
+        """Initialize SQLite database"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
@@ -97,6 +181,108 @@ class PracticeDatabase:
             )
         ''')
         
+        # Continue with other tables...
+        self._create_remaining_tables_sqlite(cursor)
+        
+        conn.commit()
+        conn.close()
+    
+    def _init_postgresql(self):
+        """Initialize PostgreSQL database"""
+        conn = self._get_connection()
+        cursor = conn.cursor()
+        
+        # Patients table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS patients (
+                id TEXT PRIMARY KEY,
+                first_name TEXT NOT NULL,
+                last_name TEXT NOT NULL,
+                email TEXT,
+                phone TEXT,
+                birth_date DATE,
+                address TEXT,
+                medical_history TEXT,
+                allergies TEXT,
+                emergency_contact TEXT,
+                insurance_info TEXT,
+                notes TEXT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        ''')
+        
+        # Appointments table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS appointments (
+                id TEXT PRIMARY KEY,
+                patient_id TEXT,
+                appointment_date DATE NOT NULL,
+                appointment_time TIME NOT NULL,
+                duration_minutes INTEGER DEFAULT 60,
+                treatment_type TEXT,
+                status TEXT DEFAULT 'scheduled',
+                doctor TEXT DEFAULT 'Dr.',
+                room TEXT,
+                notes TEXT,
+                treatment_plan_id TEXT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (patient_id) REFERENCES patients (id)
+            )
+        ''')
+        
+        # Treatment plans table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS treatment_plans (
+                id TEXT PRIMARY KEY,
+                patient_id TEXT,
+                plan_data TEXT NOT NULL,
+                consultation_text TEXT,
+                status TEXT DEFAULT 'active',
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (patient_id) REFERENCES patients (id)
+            )
+        ''')
+        
+        # Schedule blocks table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS schedule_blocks (
+                id TEXT PRIMARY KEY,
+                block_date DATE NOT NULL,
+                start_time TIME NOT NULL,
+                end_time TIME NOT NULL,
+                block_type TEXT DEFAULT 'unavailable',
+                reason TEXT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        ''')
+        
+        # Swiss dental pricing table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS dental_pricing (
+                id TEXT PRIMARY KEY,
+                tarmed_code TEXT UNIQUE,
+                treatment_name TEXT NOT NULL,
+                treatment_category TEXT,
+                base_price_chf REAL NOT NULL,
+                lamal_covered BOOLEAN DEFAULT FALSE,
+                lamal_percentage REAL DEFAULT 0.0,
+                description TEXT,
+                duration_minutes INTEGER DEFAULT 60,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        ''')
+        
+        # Continue with other tables...
+        self._create_remaining_tables_postgresql(cursor)
+        
+        conn.commit()
+        conn.close()
+    
+    def _create_remaining_tables_sqlite(self, cursor):
+        """Create remaining tables for SQLite"""
         # Invoices table
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS invoices (
@@ -134,6 +320,53 @@ class PracticeDatabase:
             )
         ''')
         
+        # Continue with other tables...
+        self._create_additional_tables_sqlite(cursor)
+    
+    def _create_remaining_tables_postgresql(self, cursor):
+        """Create remaining tables for PostgreSQL"""
+        # Invoices table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS invoices (
+                id TEXT PRIMARY KEY,
+                patient_id TEXT NOT NULL,
+                treatment_plan_id TEXT,
+                invoice_number TEXT UNIQUE NOT NULL,
+                invoice_date TEXT NOT NULL,
+                due_date TEXT,
+                total_amount_chf REAL NOT NULL,
+                lamal_amount_chf REAL DEFAULT 0.0,
+                insurance_amount_chf REAL DEFAULT 0.0,
+                patient_amount_chf REAL NOT NULL,
+                status TEXT DEFAULT 'pending',
+                notes TEXT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (patient_id) REFERENCES patients (id)
+            )
+        ''')
+        
+        # Invoice items table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS invoice_items (
+                id TEXT PRIMARY KEY,
+                invoice_id TEXT NOT NULL,
+                tarmed_code TEXT,
+                treatment_name TEXT NOT NULL,
+                quantity INTEGER DEFAULT 1,
+                unit_price_chf REAL NOT NULL,
+                total_price_chf REAL NOT NULL,
+                lamal_covered BOOLEAN DEFAULT FALSE,
+                lamal_amount_chf REAL DEFAULT 0.0,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (invoice_id) REFERENCES invoices (id)
+            )
+        ''')
+        
+        # Continue with other tables...
+        self._create_additional_tables_postgresql(cursor)
+    
+    def _create_additional_tables_sqlite(self, cursor):
+        """Create additional tables for SQLite"""
         # Payments table
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS payments (
@@ -173,6 +406,142 @@ class PracticeDatabase:
             )
         ''')
         
+        # Continue with remaining tables...
+        self._create_final_tables_sqlite(cursor)
+    
+    def _create_additional_tables_postgresql(self, cursor):
+        """Create additional tables for PostgreSQL"""
+        # Payments table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS payments (
+                id TEXT PRIMARY KEY,
+                invoice_id TEXT NOT NULL,
+                payment_date TEXT NOT NULL,
+                amount_chf REAL NOT NULL,
+                payment_method TEXT,
+                reference_number TEXT,
+                notes TEXT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (invoice_id) REFERENCES invoices (id)
+            )
+        ''')
+        
+        # Devis (estimates) table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS devis (
+                id TEXT PRIMARY KEY,
+                patient_id TEXT NOT NULL,
+                treatment_plan_id TEXT,
+                devis_number TEXT UNIQUE NOT NULL,
+                devis_date TEXT NOT NULL,
+                valid_until TEXT,
+                total_amount_chf REAL NOT NULL,
+                lamal_amount_chf REAL DEFAULT 0.0,
+                insurance_amount_chf REAL DEFAULT 0.0,
+                patient_amount_chf REAL NOT NULL,
+                status TEXT DEFAULT 'pending',
+                approved_date TEXT,
+                rejected_date TEXT,
+                rejection_reason TEXT,
+                notes TEXT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (patient_id) REFERENCES patients (id),
+                FOREIGN KEY (treatment_plan_id) REFERENCES treatment_plans (id)
+            )
+        ''')
+        
+        # Continue with remaining tables...
+        self._create_final_tables_postgresql(cursor)
+    
+    def _create_final_tables_sqlite(self, cursor):
+        """Create final tables for SQLite"""
+        # Devis items table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS devis_items (
+                id TEXT PRIMARY KEY,
+                devis_id TEXT NOT NULL,
+                tarmed_code TEXT,
+                treatment_name TEXT NOT NULL,
+                quantity INTEGER DEFAULT 1,
+                unit_price_chf REAL NOT NULL,
+                total_price_chf REAL NOT NULL,
+                lamal_covered BOOLEAN DEFAULT FALSE,
+                lamal_amount_chf REAL DEFAULT 0.0,
+                discount_percentage REAL DEFAULT 0.0,
+                discount_amount_chf REAL DEFAULT 0.0,
+                final_price_chf REAL NOT NULL,
+                notes TEXT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (devis_id) REFERENCES devis (id)
+            )
+        ''')
+        
+        # Payment plans table for flexible payment options
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS payment_plans (
+                id TEXT PRIMARY KEY,
+                invoice_id TEXT NOT NULL,
+                plan_name TEXT NOT NULL,
+                total_amount_chf REAL NOT NULL,
+                number_of_payments INTEGER NOT NULL,
+                payment_frequency TEXT DEFAULT 'monthly',
+                first_payment_date TEXT NOT NULL,
+                payment_amount_chf REAL NOT NULL,
+                status TEXT DEFAULT 'active',
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (invoice_id) REFERENCES invoices (id)
+            )
+        ''')
+        
+        # Scheduled payments table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS scheduled_payments (
+                id TEXT PRIMARY KEY,
+                payment_plan_id TEXT NOT NULL,
+                payment_number INTEGER NOT NULL,
+                scheduled_date TEXT NOT NULL,
+                amount_chf REAL NOT NULL,
+                status TEXT DEFAULT 'pending',
+                actual_payment_id TEXT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (payment_plan_id) REFERENCES payment_plans (id),
+                FOREIGN KEY (actual_payment_id) REFERENCES payments (id)
+            )
+        ''')
+        
+        # Expected revenue table for financial forecasting
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS expected_revenue (
+                id TEXT PRIMARY KEY,
+                invoice_id TEXT NOT NULL,
+                devis_id TEXT,
+                expected_date TEXT NOT NULL,
+                expected_amount_chf REAL NOT NULL,
+                actual_amount_chf REAL DEFAULT 0.0,
+                status TEXT DEFAULT 'pending',
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (invoice_id) REFERENCES invoices (id),
+                FOREIGN KEY (devis_id) REFERENCES devis (id)
+            )
+        ''')
+        
+        # Patient education documents table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS patient_education (
+                id TEXT PRIMARY KEY,
+                patient_id TEXT NOT NULL,
+                treatment_plan_id TEXT,
+                education_content TEXT NOT NULL,
+                education_title TEXT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (patient_id) REFERENCES patients (id),
+                FOREIGN KEY (treatment_plan_id) REFERENCES treatment_plans (id)
+            )
+        ''')
+    
+    def _create_final_tables_postgresql(self, cursor):
+        """Create final tables for PostgreSQL"""
         # Devis items table
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS devis_items (
@@ -258,14 +627,6 @@ class PracticeDatabase:
             )
         ''')
 
-        conn.commit()
-        conn.close()
-        
-        # Initialize pricing data
-        self.initialize_swiss_pricing()
-        
-        print("✅ Database initialized successfully")
-    
     def add_patient(self, patient_data: Dict[str, Any]) -> str:
         """Add a new patient"""
         conn = sqlite3.connect(self.db_path)

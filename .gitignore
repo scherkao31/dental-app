@@ -42,6 +42,12 @@ database.db
 practice.db
 chroma_db/
 
+# Migration and backup files
+sqlite_export_*.json
+restore_postgresql_*.py
+*.backup
+*.dump
+
 # Large temporary directories
 temp/
 

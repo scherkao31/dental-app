@@ -5386,5 +5386,16 @@ if __name__ == '__main__':
     print("🔧 Multi-LLM architecture active")
     print("🏥 Practice management features enabled")
     print("🎯 PowerPoint generation system integrated")
-    print("🌐 Server starting on http://localhost:5001")
-    app.run(debug=True, host='0.0.0.0', port=5001) 
+    
+    # Get port from environment variable (for Render deployment)
+    port = int(os.getenv('PORT', 5001))
+    
+    # Determine if we're in production
+    is_production = os.getenv('RENDER') is not None
+    
+    if is_production:
+        print(f"🌐 Production server starting on port {port}")
+        app.run(debug=False, host='0.0.0.0', port=port)
+    else:
+        print(f"🌐 Development server starting on http://localhost:{port}")
+        app.run(debug=True, host='0.0.0.0', port=port) 
