@@ -629,17 +629,17 @@ class PracticeDatabase:
 
     def add_patient(self, patient_data: Dict[str, Any]) -> str:
         """Add a new patient"""
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
         patient_id = str(uuid.uuid4())
-        cursor.execute('''
+        
+        query = '''
             INSERT INTO patients (
                 id, first_name, last_name, email, phone, birth_date,
                 address, medical_history, allergies, emergency_contact,
                 insurance_info, notes
             ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        ''', (
+        '''
+        
+        params = (
             patient_id,
             patient_data.get('first_name', ''),
             patient_data.get('last_name', ''),
@@ -652,56 +652,46 @@ class PracticeDatabase:
             patient_data.get('emergency_contact', ''),
             patient_data.get('insurance_info', ''),
             patient_data.get('notes', '')
-        ))
+        )
         
-        conn.commit()
-        conn.close()
+        self._execute_query(query, params)
         return patient_id
     
     def get_patients(self, search_term: Optional[str] = None) -> List[Dict[str, Any]]:
         """Get all patients or search by name/email"""
-        conn = sqlite3.connect(self.db_path)
-        conn.row_factory = sqlite3.Row
-        cursor = conn.cursor()
-        
         if search_term:
-            cursor.execute('''
+            query = '''
                 SELECT * FROM patients 
                 WHERE first_name LIKE ? OR last_name LIKE ? OR email LIKE ?
                 ORDER BY last_name, first_name
-            ''', (f'%{search_term}%', f'%{search_term}%', f'%{search_term}%'))
+            '''
+            params = (f'%{search_term}%', f'%{search_term}%', f'%{search_term}%')
         else:
-            cursor.execute('SELECT * FROM patients ORDER BY last_name, first_name')
+            query = 'SELECT * FROM patients ORDER BY last_name, first_name'
+            params = None
         
-        patients = [dict(row) for row in cursor.fetchall()]
-        conn.close()
-        return patients
+        return self._execute_query(query, params, fetch_all=True)
 
     def get_patient(self, patient_id: str) -> Optional[Dict[str, Any]]:
         """Get a specific patient by ID"""
-        conn = sqlite3.connect(self.db_path)
-        conn.row_factory = sqlite3.Row
-        cursor = conn.cursor()
+        query = 'SELECT * FROM patients WHERE id = ?'
+        params = (patient_id,)
         
-        cursor.execute('SELECT * FROM patients WHERE id = ?', (patient_id,))
-        row = cursor.fetchone()
-        conn.close()
-        
-        return dict(row) if row else None
+        return self._execute_query(query, params, fetch_one=True)
 
     def create_patient(self, **patient_data) -> str:
         """Create a new patient"""
         patient_id = str(uuid.uuid4())
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
         
-        cursor.execute('''
+        query = '''
             INSERT INTO patients (
                 id, first_name, last_name, email, phone, birth_date,
                 address, medical_history, allergies, emergency_contact,
                 insurance_info, notes, created_at, updated_at
             ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        ''', (
+        '''
+        
+        params = (
             patient_id,
             patient_data.get('first_name'),
             patient_data.get('last_name'),
@@ -716,10 +706,9 @@ class PracticeDatabase:
             patient_data.get('notes'),
             datetime.now().isoformat(),
             datetime.now().isoformat()
-        ))
+        )
         
-        conn.commit()
-        conn.close()
+        self._execute_query(query, params)
         return patient_id
 
     def update_patient(self, patient_id: str, **patient_data) -> bool:
@@ -1134,15 +1123,15 @@ class PracticeDatabase:
     def create_appointment(self, **appointment_data) -> str:
         """Create a new appointment"""
         appointment_id = str(uuid.uuid4())
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
         
-        cursor.execute('''
+        query = '''
             INSERT INTO appointments (
                 id, patient_id, treatment_plan_id, appointment_date, appointment_time,
                 duration_minutes, treatment_type, doctor, notes, status, created_at, updated_at
             ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        ''', (
+        '''
+        
+        params = (
             appointment_id,
             appointment_data.get('patient_id'),
             appointment_data.get('treatment_plan_id'),
@@ -1155,10 +1144,9 @@ class PracticeDatabase:
             appointment_data.get('status', 'scheduled'),
             datetime.now().isoformat(),
             datetime.now().isoformat()
-        ))
+        )
         
-        conn.commit()
-        conn.close()
+        self._execute_query(query, params)
         return appointment_id
 
     def get_patient_details(self, patient_id: str) -> Dict[str, Any]:
@@ -1211,14 +1199,11 @@ class PracticeDatabase:
     def initialize_swiss_pricing(self):
         """Initialize Swiss dental pricing based on TARMED and typical Swiss dental fees"""
         try:
-            with sqlite3.connect(self.db_path) as conn:
-                cursor = conn.cursor()
-                
-                # Check if pricing data already exists
-                cursor.execute("SELECT COUNT(*) FROM dental_pricing")
-                if cursor.fetchone()[0] > 0:
-                    print("✅ Swiss dental pricing already initialized")
-                    return
+            # Check if pricing data already exists
+            count_result = self._execute_query("SELECT COUNT(*) FROM dental_pricing", fetch_one=True)
+            if count_result and list(count_result.values())[0] > 0:
+                print("✅ Swiss dental pricing already initialized")
+                return
                 
                 # Swiss dental pricing data (based on TARMED and typical Swiss fees)
                 pricing_data = [
@@ -1289,14 +1274,15 @@ class PracticeDatabase:
                 # Insert pricing data
                 for item in pricing_data:
                     pricing_id = str(uuid.uuid4())
-                    cursor.execute('''
+                    query = '''
                         INSERT INTO dental_pricing 
                         (id, tarmed_code, treatment_name, treatment_category, base_price_chf, 
                          lamal_covered, lamal_percentage, description, duration_minutes)
                         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-                    ''', (pricing_id, *item))
+                    '''
+                    params = (pricing_id, *item)
+                    self._execute_query(query, params)
                 
-                conn.commit()
                 print(f"✅ Swiss dental pricing initialized with {len(pricing_data)} treatments")
                 
         except Exception as e:
